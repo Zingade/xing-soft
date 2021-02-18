@@ -85,20 +85,20 @@ a:hover{
   text-align: center;
 }
 .product-name{
-  font-size: 1rem;
+  font-size: 2rem;
   padding: 0.2rem;
 }
 .product-price{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   padding: 0.2rem;
 }
 .product-image{
-  width: 10rem;
-  height: 8rem;
+  width: 20rem;
+  height: 15rem;
 }
 .product-qty{
-  font-size: 1rem;
+  font-size: 2rem;
   padding: 0.2rem;
 }
 .button-add-to-cart{
@@ -109,7 +109,7 @@ a:hover{
   background-color: #f0c040;
   font-size: 1.5rem;
   font-weight: bold;
-  width: 10rem;
+  width: 20rem;
 }
 
 .button-add-to-cart:hover{
