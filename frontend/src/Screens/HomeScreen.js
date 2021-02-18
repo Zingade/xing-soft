@@ -13,11 +13,12 @@ function HomeScreen(props){
         return() => {
 
         };
-    }, [])
-
+    }, []);
+    console.log(products);
+    
     return <ul className="products">
     {
-        products.map(product =>
+        products.map(product => 
         <li key={product._id}> 
             <div className="product">
                 <img className="product-image" src={product.image} alt="products"></img>
@@ -36,8 +37,7 @@ function HomeScreen(props){
             </div>
         </li>)
     }
-</ul>
-
+</ul>;
 }
 
 export default HomeScreen;
