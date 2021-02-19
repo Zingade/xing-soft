@@ -1,21 +1,19 @@
-import React from 'react';
-import axios from 'axios'
-import { CART_ADD_ITEM } from '../constants/cartConstants';
+import React, {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../actions/cartActions';
 
-const addToCart = (productId, qty) => async (dispatch) => {
-    try{
-        const {data} = await axios.get('/api/products/'+productId);
-        dispatch({type:CART_ADD_ITEM, payload:{
-            proiduct:data._id,
-            name:data.name,
-            image:data.image,
-            price:data.price,
-            qty
-        }})
-    }
-    catch (error){
+function CartScreen(props) {
+    const productId = props.match.params.id;
+    const qty = props.location.search ? Number(props.location.search.split("=")[1]):1;
+    const dispatch = useDispatch();
 
-    }
+    useEffect(() => {
+        if(productId){
+            dispatch(addToCart(productId,qty));
+        }
+    },[])
+
+    return <div>Cart Screen</div>;
 }
 
-export default {addToCart};
+export default CartScreen;
