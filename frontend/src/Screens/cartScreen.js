@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../actions/CartActions';
+import { addToCart } from '../actions/cartActions';
 
 function CartScreen(props) {
     const productId = props.match.params.id;
