@@ -11,8 +11,9 @@ const app = express();
 app.use(express.json())
 
 app.get('/api/products/:id', (req, res) => {
-    const productId = req.param.id;
-    const product = data.products.find(x=>x.id === productId);
+    const productId = req.params.id;
+
+    const product = data.products.find(x=>x._id === productId);
     if (product) {
         res.send(product);
     }
