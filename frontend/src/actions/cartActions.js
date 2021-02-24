@@ -11,6 +11,7 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
             name: data.name,
             image:data.image,
             price:data.price,
+            qty_measured_in:data.qty_measured_in,
             qty
         }})
 
