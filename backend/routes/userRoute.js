@@ -48,7 +48,6 @@ router.post('/register', async (req, res) => {
     }
 })
 
-
 router.post('/createadmin', async (req, res) => {
     try{
             const adminUser = await User.findOne({

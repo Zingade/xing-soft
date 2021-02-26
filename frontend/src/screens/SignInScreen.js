@@ -53,7 +53,7 @@ function SignInScreen(props) {
                     New to xingShop
                 </li>
                 <li>
-                    <Link to="/register" className="button secondary text-center">Create your xinShop Account</Link>
+                    <Link to="/register" className="button secondary text-center">Create Your xingShop Account</Link>
                 </li>
             </ul>
         </form>
