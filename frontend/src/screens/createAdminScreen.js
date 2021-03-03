@@ -28,7 +28,7 @@ function CreateAdminScreen(props) {
 
     return <div className="form">
         <form onSubmit={submitHandler}>
-            <ui className="form-container">
+            <ul className="form-container">
                 <li>
                     <h2>Create Admin Account</h2>
                 </li>
@@ -66,7 +66,7 @@ function CreateAdminScreen(props) {
                 <li>
                     Already have an account ? <Link to="/signin">Sign-In</Link>
                 </li>
-            </ui>
+            </ul>
         </form>
     </div>
 }

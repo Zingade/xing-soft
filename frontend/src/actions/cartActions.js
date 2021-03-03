@@ -1,7 +1,7 @@
 import axios from "axios"
 import Cookie from "js-cookie"
 
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
+import { CART_SEND_WAHTSAPP_MSG, CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 const addToCart = (productId, qty) => async (dispatch, getState) => {
     try{
@@ -35,4 +35,18 @@ const removeFromCart = (productId) => async (dispatch, getState) => {
     }
 } 
 
-export {addToCart, removeFromCart};
+const sendWhatsAppMessage = () => async (dispatch,getState) => {
+    try{
+
+        var messageTobeSend = "";
+        const {cart: {cartItems}} = getState();
+        cartItems.map( item => messageTobeSend += (item.name + " " + item.qty + " " + item.qty_measured_in + "$$"))  
+        const {data} = await axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
+        dispatch({type:CART_SEND_WAHTSAPP_MSG})
+        }
+    catch(error){
+
+    }
+}
+
+export {addToCart, removeFromCart,sendWhatsAppMessage};

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart } from '../actions/cartActions';
+import { addToCart, removeFromCart, sendWhatsAppMessage } from '../actions/cartActions';
 
 function CartScreen(props) {
 
@@ -18,7 +18,9 @@ function CartScreen(props) {
     }
 
     const checkOutHandler = () => {
-        props.history.push("/signin?redirect=shipping")
+        if (cartItems.length) {
+            dispatch(sendWhatsAppMessage());
+        }
     }
 
     useEffect(() => {

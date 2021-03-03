@@ -29,6 +29,9 @@ function HomeScreen(props){
     error? <div>(error)</div> :
     <ul className="products">
     {
+        (!products.length)?
+            <h3>No products available</h3>:
+        
         products.map(product => 
         <li key={product._id}> 
             <div className="product">
