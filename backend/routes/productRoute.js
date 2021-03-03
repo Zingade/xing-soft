@@ -10,12 +10,27 @@ const twilloAuthToken = process.env.TwilloAuthToken;
 
 const client = require('twilio')(twilloAccountSid, twilloAuthToken); 
 
-
-router.get("/", async (req,res) => {
-    const products = await Product.find({});
+router.get('/', async (req, res) => {
+    const category = req.query.category ? { category: req.query.category } : {};
+    const searchKeyword = req.query.searchKeyword
+      ? {
+          name: {
+            $regex: req.query.searchKeyword,
+            $options: 'i',
+          },
+        }
+      : {};
+    const sortOrder = req.query.sortOrder
+      ? req.query.sortOrder === 'lowest'
+        ? { price: 1 }
+        : { price: -1 }
+      : { _id: -1 };
+    const products = await Product.find({ ...category, ...searchKeyword }).sort(
+      sortOrder
+    );
     res.send(products);
-});
-
+  });
+  
 router.get('/:id', async (req, res) => {
     const productId = req.params.id;
 
@@ -35,15 +50,15 @@ function replaceAll(string, search, replace) {
 router.post('/sendwhatsapp/:id', (req, res) => {
     var originalString = req.params.id;
     const newString = replaceAll(originalString,"$$","\n");  
-
-    client.messages 
+    console.log(newString);
+/*    client.messages 
     .create({ 
        body: newString, 
        from: 'whatsapp:+14155238886',       
        to: 'whatsapp:+919845210251' 
      }) 
     .then(message => console.log(message.sid)) 
-    .done();
+    .done();*/
 });
 
 

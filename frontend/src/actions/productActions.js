@@ -1,17 +1,27 @@
 import Axios from "axios";
 import { PRODUCT_DELETE_FAIL, PRODUCT_DELETE_REQUEST, PRODUCT_DELETE_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_SAVE_FAIL, PRODUCT_SAVE_REQUEST, PRODUCT_SAVE_SUCCESS } from "../constants/productConstants"
 
-const listProducts = () => async (dispatch) => {
-    try{
-        dispatch({type:PRODUCT_LIST_REQUEST});
-        const {data} = await Axios.get('/api/products');
-        dispatch({type:PRODUCT_LIST_SUCCESS, payload:data});
-        }
-    catch(error){
-        dispatch({type: PRODUCT_LIST_FAIL, payload:error.message});
+const listProducts = (
+    category = '',
+    searchKeyword = '',
+    sortOrder = ''
+  ) => async (dispatch) => {
+    try {
+      dispatch({ type: PRODUCT_LIST_REQUEST });
+      const { data } = await Axios.get(
+        '/api/products?category=' +
+          category +
+          '&searchKeyword=' +
+          searchKeyword +
+          '&sortOrder=' +
+          sortOrder
+      );
+      dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
     }
-}
-
+  };
+  
 const saveProduct = (product) => async (dispatch, getState) => {
     try{
         dispatch({type:PRODUCT_SAVE_REQUEST, payload:product});
