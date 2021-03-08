@@ -68,7 +68,7 @@ router.post("/", isAuth, isAdmin, async (req, res)=>{
         image:req.body.image,
         price:req.body.price,
         category:req.body.category,
-        qty_measured_in: req.body.qty_measured_in,
+        quantity: req.body.quantity,
         description: req.body.description,
     })
     const newProduct = await product.save(); 
@@ -86,7 +86,7 @@ router.put("/:id", isAuth, isAdmin, async (req, res)=>{
         product.image = req.body.image;
         product.price = req.body.price;
         product.category = req.body.category;
-        product.qty_measured_in = req.body.qty_measured_in;
+        product.quantity = req.body.quantity;
         product.description = req.body.description;
         const updatedProduct = await product.save();
         if(updatedProduct){

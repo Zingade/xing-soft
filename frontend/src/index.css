@@ -72,6 +72,7 @@ a:hover{
   align-items: center;
   flex-wrap: wrap;
 }
+
 /*.product{
   display: flex;
   flex-direction: column;
@@ -87,9 +88,24 @@ a:hover{
   border-bottom: .1rem #c0c0c0 solid;
   text-align: center;
 }
+
 .product-name{
+  display: flex;
   font-size: 1.2rem;
-  padding: 0.2rem;
+  font-weight: bold;
+  padding: 0rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-input{
+  width: 3rem;
+  height: 2rem;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 .product-price{
   font-size: 1.4rem;
@@ -315,7 +331,6 @@ tbody>tr:nth-child(odd){
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 
 /* filter */
 

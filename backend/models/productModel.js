@@ -5,7 +5,7 @@ var productSchema = new mongoose.Schema({
     image:{type: String, required:true},
     price:{type:Number, default:0, required:true},
     category:{type:String, required:true},
-    qty_measured_in: {type:String, required:true},
+    quantity: {type:String, required:true},
     description: {type:String, required:true, default:''},
 });
 

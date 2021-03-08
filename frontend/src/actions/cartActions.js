@@ -11,7 +11,7 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
             name: data.name,
             image:data.image,
             price:data.price,
-            qty_measured_in:data.qty_measured_in,
+            quantity:data.quantity,
             qty
         }})
 
@@ -40,7 +40,7 @@ const sendWhatsAppMessage = () => async (dispatch,getState) => {
 
         var messageTobeSend = "";
         const {cart: {cartItems}} = getState();
-        cartItems.map( item => messageTobeSend += (item.name + " " + item.qty + " " + item.qty_measured_in + "$$"))  
+        cartItems.map( item => messageTobeSend += (item.name + " " + item.quantity + 'x' + item.qty +' quantity'  + "$$"))  
         const {data} = await axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
         dispatch({type:CART_SEND_WAHTSAPP_MSG})
         }

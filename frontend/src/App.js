@@ -14,6 +14,10 @@ function App() {
     const userSignin = useSelector(state=>state.userSignin);
     const {userInfo} = userSignin; 
 
+    const cart = useSelector(state => state.cart);
+    const {cartItems} = cart;
+   
+
     const openMenu = () => {
         document.querySelector(".sidebar").classList.add("open")
     } 
@@ -32,7 +36,7 @@ function App() {
                 <Link className="brand" to="/">xingShop</Link>
             </div>
             <div className="header-links">
-                <a href="/cart">Cart</a>
+                <Link to='/cart' >Cart[{cartItems.length}]</Link>
                 {
                     userInfo ? <Link to='/profile'>{userInfo.name}</Link>:
                     <Link to='/signin'>Sign In</Link>

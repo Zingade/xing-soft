@@ -12,7 +12,7 @@ function ProductsScreen(props) {
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState('');
-    const [qty_measured_in, setQtyMeasuredIn] = useState('');
+    const [quantity, setQuantity] = useState('');
     const [description, setDescription] = useState('');
     const productList = useSelector(state=>state.productList);
     const {loading, products, error} = productList;
@@ -39,13 +39,13 @@ function ProductsScreen(props) {
         setPrice(product.price);
         setImage(product.image);
         setCategory(product.category);
-        setQtyMeasuredIn(product.qty_measured_in);
+        setQuantity(product.quantity);
         setDescription(product.description);
     }
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(saveProduct({_id:id, name,price, image, category, qty_measured_in,description}));
+        dispatch(saveProduct({_id:id, name,price, image, category, quantity,description}));
     }
 
     const deleteHandler = (product) => {
@@ -124,10 +124,19 @@ function ProductsScreen(props) {
                 </li>
                 <li>
                     <label htmlFor="quantity-in"> 
-                    Qty Measured In:
+                    Quantity:
                     </label>
-                    <input type="text" value={qty_measured_in} name="quantity-in" id="quantity-in" onChange={(e)=>setQtyMeasuredIn(e.target.value)}>
-                    </input>
+                    <select value={quantity} name="quantity-in" id="quantity-in" onChange={(e)=>setQuantity(e.target.value)}>
+                        <option>100 gm</option>
+                        <option>250 gm</option>
+                        <option>500 gm</option>
+                        <option>1 Kg</option>
+                        <option>1 Num</option>
+                        <option>2 Num</option>
+                        <option>5 Num</option>
+                        <option>10 Num</option>
+                        <option>25 Num</option>
+                    </select>
                 </li>
                 <li>
                     <label htmlFor="name"> 
@@ -153,7 +162,7 @@ function ProductsScreen(props) {
                     <th>Name</th>
                     <th>Price</th>
                     <th>Category</th>
-                    <th>Quantity Measured In</th>
+                    <th>Quantity</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -164,7 +173,7 @@ function ProductsScreen(props) {
                 <td>{product.name}</td>
                 <td>{product.price}</td>
                 <td>{product.category}</td>
-                <td>{product.qty_measured_in}</td>
+                <td>{product.quantity}</td>
                 <td>
                   <button onClick={()=>openModal(product)} className="button">
                     Edit

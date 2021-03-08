@@ -56,15 +56,8 @@ function CartScreen(props) {
                             <div>
                                 {item.name};
                             </div>
-                            Qty:
-                            <select value={item.qty} onChange={(e)=>dispatch(addToCart(item.product,e.target.value))}>
-                                <option value="0.5">0.5</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select> {item.qty_measured_in}
-                            <button type="button" className="button" onClick={()=>removeFromCartHandler(item.product)}>
+                            {item.quantity} x {item.qty} quantity     . 
+                            <button type="button" className="button primary button_right" onClick={()=>removeFromCartHandler(item.product)}>
                                 Delete
                             </button>
                         </div>
@@ -83,7 +76,7 @@ function CartScreen(props) {
                 ₹{cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
             </h3>
             <button onClick = {checkOutHandler} className="button primary full-width" disabled = {cartItems.length === 0}>
-                Proceeed to Checkout
+                Checkout and send WhatsApp
             </button>
         </div>
     </div>;
