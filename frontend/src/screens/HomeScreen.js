@@ -122,9 +122,9 @@ function HomeScreen(props){
                 <div className="product-name">{product.quantity}</div>
                 <div className="product-price">₹{product.price}</div>
                 {(cartItems.find(x=>x.product === product._id)) ? <div>
-                <button type="button"  id={product._id} onClick={submitMinusHandler}>-</button>
+                <button className="button_plus_minus" type="button"  id={product._id} onClick={submitMinusHandler}>-</button>
                 <input className="product-input" min="0" max="5" name="quantity" type="number" id={product._id+"input"} defaultValue={cartItems.find(x=>x.product === product._id).qty}></input>
-                <button type="button" id={product._id} onClick={submitPlusHandler}>+</button>
+                <button className="button_plus_minus" type="button" id={product._id} onClick={submitPlusHandler}>+</button>
                 </div> :
                 <button onClick = {handleAddToCart} className="button-add-to-cart" id={product._id} name={product._id}>Add to Cart</button>
               }

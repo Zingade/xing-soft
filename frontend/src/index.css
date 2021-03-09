@@ -138,6 +138,17 @@ a:hover{
 .button.secondary {
   background-color: #f0f0f0;
 }
+
+.button_plus_minus {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: #f0c040;
+}
+
 .text-center{
   text-align: center;
 }
