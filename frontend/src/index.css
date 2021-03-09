@@ -140,13 +140,17 @@ a:hover{
 }
 
 .button_plus_minus {
+  padding: 0;
   height: 2rem;
   width: 2rem;
   padding: 0.1rem;
+  text-align: center;
   border: 0.1rem #808080 solid;
   border-radius: 0.2rem;
   cursor: pointer;
   background-color: #f0c040;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .text-center{
