@@ -11,6 +11,7 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
             image:data.image,
             price:data.price,
             quantity:data.quantity,
+            category:data.category,
             qty
         }})
 
@@ -36,10 +37,20 @@ const removeFromCart = (productId) => async (dispatch, getState) => {
 
 const sendWhatsAppMessage = () => async (dispatch,getState) => {
     try{
-
-        var messageTobeSend = "";
+        var messageTobeSend="", vegetablesString = "$$Vegetables:$$", groceryString="$$Grocery:$$", medicineString="$$Medicine:$$",stationnaryString="$$Stationary:$$",othersString="$$Others:$$";
         const {cart: {cartItems}} = getState();
-        cartItems.map( item => messageTobeSend += (item.name + " " + item.quantity + ' x ' + item.qty +' quantity'  + "$$"))  
+        cartItems.map( item => 
+            (item.category === "Vegetables")?(vegetablesString += ((item.qty === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.qty +' quantity'  + "$$"))):
+            (item.category === "Grocery")?(groceryString += ((item.qty === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.qty +' quantity'  + "$$"))):
+            (item.category === "Medicine")?(medicineString += (item.name + " " + item.quantity +"$$")):  
+            (item.category === "Stationary")?(stationnaryString += (item.name + " " + item.quantity +"$$")):
+            (othersString +=  (item.name + " " + item.quantity +"$$")));
+            messageTobeSend += (
+                ((vegetablesString === "$$Vegetables:$$")?"":vegetablesString)+
+                ((groceryString === "$$Grocery:$$")?"":groceryString)+
+                ((medicineString === "$$Medicine:$$")?"":medicineString)+
+                ((stationnaryString === "$$Stationary:$$")?"":stationnaryString)+
+                ((othersString === "$$Others:$$")?"":stationnaryString));
         const {data} = await axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
         dispatch({type:CART_SEND_WAHTSAPP_MSG})
         }

@@ -100,8 +100,8 @@ a:hover{
 }
 
 .product-input{
-  width: 3rem;
-  height: 2rem;
+  width: 3.5rem;
+  height: 3rem;
   padding: 0;
   text-align: center;
   font-weight: bold;
@@ -140,17 +140,15 @@ a:hover{
 }
 
 .button_plus_minus {
-  padding: 0;
-  height: 2rem;
-  width: 2rem;
-  padding: 0.1rem;
-  text-align: center;
-  border: 0.1rem #808080 solid;
-  border-radius: 0.2rem;
+  padding: 0.5rem;
+  border: .1rem #808080 solid;
+  border-radius: 0.5rem;
   cursor: pointer;
   background-color: #f0c040;
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: bold;
+  height: 3rem;
+  width: 3rem;
 }
 
 .text-center{
@@ -168,6 +166,7 @@ a:hover{
   background-color: #f0c040;
   font-size: 1.5rem;
   font-weight: bold;
+  height: 3rem;
   width: 10rem;
 }
 
