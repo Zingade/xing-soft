@@ -9,7 +9,7 @@ const cartItemsJSON = localStorage.getItem('cartItems');
 const cartItems = JSON.parse(cartItemsJSON) || [];
 
 const userInfoJSON = localStorage.getItem('userInfo');
-const userInfo = JSON.parse(userInfoJSON) || [];
+const userInfo = JSON.parse(userInfoJSON) || null;
 
 const initialState = { cart: {cartItems}, userSignin: {userInfo} };
 const reducer = combineReducers({
