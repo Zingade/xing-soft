@@ -1,11 +1,15 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart, sendWhatsAppMessage } from '../actions/cartActions';
+import { addToCart, removeFromCart, sendWhatsAppMessage, removeAllCartContents } from '../actions/cartActions';
+import { saveOrder } from '../actions/orderActions';
 
 function CartScreen(props) {
 
     const cart = useSelector(state => state.cart);
     const {cartItems} = cart;
+
+    const userSignin = useSelector(state=>state.userSignin);
+    const {userInfo} = userSignin; 
 
 
     const productId = props.match.params.id;
@@ -17,9 +21,21 @@ function CartScreen(props) {
 
     }
 
-    const checkOutHandler = () => {
+    function replaceAll(string, search, replace) {
+        return string.split(search).join(replace);
+     }
+     
+    const checkOutHandler = async () => {
+        var cartListString ='';
         if (cartItems.length) {
-            dispatch(sendWhatsAppMessage());
+            await dispatch(sendWhatsAppMessage());
+            const cartItemsString = await localStorage.getItem("cartItemsString");
+            const newString = replaceAll(cartItemsString,"$$","\n");  
+            const order = {orderUserName:userInfo.name,orderDate:new Date(),noOfItems:cartItems.length, aproxPrice:cartItems.reduce((a,c) => a + c.price * c.qty, 0), cartItemsString:newString,}
+            await dispatch(saveOrder(order));
+            await dispatch(removeAllCartContents());
+            localStorage.removeItem('cartItemsString'); 
+            props.history.push("/signin?redirect=orders");
         }
     }
 
@@ -71,7 +87,7 @@ function CartScreen(props) {
         </div>
         <div className="cart-action">
             <h3>
-                SubTotal ({cartItems.reduce((a,c) => a + 1 * c.qty, 0)} items)
+                Estimated Total ({cartItems.reduce((a,c) => a + 1 * c.qty, 0)} items)
                 :
                 ₹{cartItems.reduce((a,c) => a + c.price * c.qty, 0)}
             </h3>

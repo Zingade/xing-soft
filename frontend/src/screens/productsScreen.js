@@ -86,7 +86,8 @@ function ProductsScreen(props) {
                     <h2>Create Product</h2>
                 </li>
                 <li>
-                    {loadingSave&&<div>Loading...</div>}
+                    {(loadingSave||loading)&&<div>Loading...</div>}
+                    {error&&<div>{error}</div>}
                     {errorSave&&<div>{errorSave}</div>}
                 </li>
                 <li>
@@ -119,8 +120,13 @@ function ProductsScreen(props) {
                     <label htmlFor="category"> 
                     Category:
                     </label>
-                    <input type="text" value={category} name="category" id="category" onChange={(e)=>setCategory(e.target.value)}>
-                    </input>
+                    <select value={category} name="cateogory" id="cateogory" onChange={(e)=>setCategory(e.target.value)}>
+                        <option>Vegetables</option>
+                        <option>Grocery</option>
+                        <option>Medicine</option>
+                        <option>Stationary</option>
+                        <option>Others</option>
+                    </select>
                 </li>
                 <li>
                     <label htmlFor="quantity-in"> 

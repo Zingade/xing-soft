@@ -39,7 +39,7 @@ function HomeScreen(props){
     };
     const sortHandler = (e) => {
         setSortOrder(e.target.value);
-        dispatch(listProducts(category, searchKeyword, sortOrder));
+        dispatch(listProducts(category, searchKeyword, e.target.value));
     };
     const submitPlusHandler = async (e) => {
       e = e || window.event;

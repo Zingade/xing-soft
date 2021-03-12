@@ -10,10 +10,12 @@ function SignInScreen(props) {
     const userSignin = useSelector(state=>state.userSignin);
     const {loading, userInfo, error} = userSignin;
     const dispatch = useDispatch();
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
 
     useEffect(()=>{
         if(userInfo){
-            props.history.push("/");
+            props.history.push(redirect);
         }
         return () =>{
         };
@@ -53,7 +55,7 @@ function SignInScreen(props) {
                     New to xingShop
                 </li>
                 <li>
-                    <Link to="/register" className="button secondary text-center">Create Your xingShop Account</Link>
+                    <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect}  className="button secondary text-center">Create Your xingShop Account</Link>
                 </li>
             </ul>
         </form>

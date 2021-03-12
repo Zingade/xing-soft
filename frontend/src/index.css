@@ -80,6 +80,7 @@ a:hover{
   height: 100%;
 }*/
 .products li {
+  justify-content: left;
   list-style: none;
   padding: 0;
   flex: 1 0 10rem;
@@ -378,3 +379,6 @@ tbody>tr:nth-child(odd){
   background-color: #c0c0c0;
 }
 
+.label_with_white_spaces{
+  white-space: pre-wrap;
+}

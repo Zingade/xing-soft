@@ -1,6 +1,6 @@
 import axios from "axios"
 
-import { CART_SEND_WAHTSAPP_MSG, CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
+import { CART_SEND_WAHTSAPP_MSG, CART_ADD_ITEM, CART_REMOVE_ITEM, CART_REMOVEALL_ITEM } from "../constants/cartConstants";
 
 const addToCart = (productId, qty) => async (dispatch, getState) => {
     try{
@@ -35,6 +35,18 @@ const removeFromCart = (productId) => async (dispatch, getState) => {
     }
 } 
 
+const removeAllCartContents = () => async (dispatch,getState) => {
+    try{
+        dispatch({type:CART_REMOVEALL_ITEM})
+
+        localStorage.removeItem('cartItems');
+        const {cart: {cartItems}} = getState();
+    }
+    catch(error){
+
+    }
+}
+
 const sendWhatsAppMessage = () => async (dispatch,getState) => {
     try{
         var messageTobeSend="", vegetablesString = "$$Vegetables:$$", groceryString="$$Grocery:$$", medicineString="$$Medicine:$$",stationnaryString="$$Stationary:$$",othersString="$$Others:$$";
@@ -52,6 +64,7 @@ const sendWhatsAppMessage = () => async (dispatch,getState) => {
                 ((stationnaryString === "$$Stationary:$$")?"":stationnaryString)+
                 ((othersString === "$$Others:$$")?"":stationnaryString));
         const {data} = await axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
+        localStorage.setItem("cartItemsString",messageTobeSend);
         dispatch({type:CART_SEND_WAHTSAPP_MSG})
         }
     catch(error){
@@ -59,4 +72,4 @@ const sendWhatsAppMessage = () => async (dispatch,getState) => {
     }
 }
 
-export {addToCart, removeFromCart,sendWhatsAppMessage};
+export {addToCart, removeFromCart,sendWhatsAppMessage,removeAllCartContents};

@@ -8,6 +8,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import CreateAdminScreen from './screens/createAdminScreen';
 import ProductsScreen from './screens/productsScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import OrdersScreen from './screens/OrdersScreen';
 
 function App() {
 
@@ -64,10 +65,20 @@ function App() {
                     <li>
                         <Link to="/category/Grocery">Grocery</Link>
                     </li>
+                    <li>
+                        <Link to="/category/Medicine">Medicine</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/Stationary">Stationary</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/Others">Others</Link>
+                    </li>
                 </ul>
         </aside>
         <main className="main">
             <div className="content">
+                <Route path="/orders" component={OrdersScreen}/>
                 <Route path="/profile" component={ProfileScreen}/>
                 <Route path="/products" component={ProductsScreen}/>
                 <Route path="/createadmin" component={CreateAdminScreen}/>
