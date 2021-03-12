@@ -39,7 +39,7 @@ function App() {
             <div className="header-links">
                 <Link to='/cart' >Cart[{cartItems.length}]</Link>
                 {
-                    userInfo ? <Link to='/profile'>{userInfo.name}</Link>:
+                    (userInfo && userInfo.name) ? <Link to='/profile'>{userInfo.name}</Link>:
                     <Link to='/signin'>Sign In</Link>
                 }
               {userInfo && userInfo.isAdmin && (
