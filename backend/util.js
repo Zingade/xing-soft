@@ -14,6 +14,7 @@ const getToken = (user) => {
 
 const isAuth = (req, res, next) => {
     const token = req.headers.authorization;
+
     if(token){
         const onlyToken = token.slice(7,token.length);
         jwt.verify(onlyToken,jwt_secret,(err, decode)=>{

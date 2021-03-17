@@ -50,15 +50,15 @@ function replaceAll(string, search, replace) {
 router.post('/sendwhatsapp/:id', (req, res) => {
     var originalString = req.params.id;
     const newString = replaceAll(originalString,"$$","\n");  
-//    console.log(newString);
-    client.messages 
+    console.log(newString);
+/*    client.messages 
     .create({ 
        body: newString, 
        from: 'whatsapp:+14155238886',       
        to: 'whatsapp:+919845210251' 
      }) 
     .then(message => console.log(message.sid)) 
-    .done();
+    .done();*/
     return res.status(200).send({message: 'Messege sent to WhatsApp'});
 });
 

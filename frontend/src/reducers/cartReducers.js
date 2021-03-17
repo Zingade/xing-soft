@@ -1,26 +1,44 @@
 import { findDOMNode } from "react-dom";
-import { CART_ADD_ITEM, CART_REMOVEALL_ITEM, CART_REMOVE_ITEM, CART_SEND_WAHTSAPP_MSG } from "../constants/cartConstants";
+import { CART_DELETE_FAIL, CART_DELETE_REQUEST, CART_DELETE_SUCCESS, CART_LIST_FAIL, CART_LIST_REQUEST, CART_LIST_SUCCESS, CART_SAVE_FAIL, CART_SAVE_REQUEST, CART_SAVE_SUCCESS } from "../constants/cartConstants";
 
-function cartReducer(state = {cartItems:[]}, action){
+function cartListReducer(state = {cartItems:[]}, action){
     switch(action.type){
-        case CART_ADD_ITEM:
-            const item = action.payload;
-            const product = state.cartItems.find(x=>x.product === item.product);
-            
-            if(product) {
-                return { cartItems: 
-                    state.cartItems.map(x=>x.product === product.product?item:x)};
-            }
-            return {cartItems: [...state.cartItems, item]};
-        case CART_REMOVE_ITEM:
-            return {cartItems:state.cartItems.filter(x => x.product !== action.payload)}
-        case CART_REMOVEALL_ITEM:
-            return {cartItems:[]}
-            case CART_SEND_WAHTSAPP_MSG:
-            return {cartItems:state.cartItems}
+        case CART_LIST_REQUEST:
+            return {loading: true, cartItems: [] };
+        case CART_LIST_SUCCESS:
+            return {loading: false, cartItems:action.payload};
+        case CART_LIST_FAIL:
+            return {loading: false, error:action.payload};
         default:
-        return state;
+            return state;
     }
 }
 
-export {cartReducer}
+
+function cartSaveReducer(state = {cartItem:[]}, action){
+    switch(action.type){
+        case CART_SAVE_REQUEST:
+            return {loading: true};
+        case CART_SAVE_SUCCESS:
+            return {loading: false, success: true, cartItem:action.payload};
+        case CART_SAVE_FAIL:
+            return {loading: false, error:action.payload};
+        default:
+            return state;
+    }
+}
+
+function cartDeleteReducer(state = {cartItem:[]}, action){
+    switch(action.type){
+        case CART_DELETE_REQUEST:
+            return {loading: true};
+        case CART_DELETE_SUCCESS:
+            return {loading: false, success: true, cartItem:action.payload};
+        case CART_DELETE_FAIL:
+            return {loading: false, error:action.payload};
+        default:
+            return state;
+    }
+}
+
+export {cartSaveReducer,cartDeleteReducer,cartListReducer}

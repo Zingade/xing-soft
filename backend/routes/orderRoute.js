@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     res.send(orders);
 });
 
-router.post("/", isAuth, isAdmin, async (req, res)=>{
+router.post("/", isAuth, async (req, res)=>{
   const order = new Order({
     orderUserName:req.body.orderUserName,
     orderDate:req.body.orderDate,

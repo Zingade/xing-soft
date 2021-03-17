@@ -15,9 +15,8 @@ function App() {
     const userSignin = useSelector(state=>state.userSignin);
     const {userInfo} = userSignin; 
 
-    const cart = useSelector(state => state.cart);
-    const {cartItems} = cart;
-   
+    const cartList = useSelector(state => state.cartList);
+    const {cartItems, loading, error} = cartList;
 
     const openMenu = () => {
         document.querySelector(".sidebar").classList.add("open")
@@ -25,6 +24,7 @@ function App() {
     const closeMenu = () => {
         document.querySelector(".sidebar").classList.remove("open")
     }
+    
 
   return (
     <BrowserRouter>
@@ -36,24 +36,27 @@ function App() {
                 </button>
                 <Link className="brand" to="/">xingShop</Link>
             </div>
+            {loading?<div> </div>:
+            (error)?error.message:(
             <div className="header-links">
-                <Link to='/cart' >Cart[{cartItems.length}]</Link>
-                {
-                    userInfo  ? <Link to='/profile'>{userInfo.name}</Link>:
-                    <Link to='/signin'>Sign In</Link>
-                }
-              {userInfo && userInfo.isAdmin && (
-              <div className="dropdown">
-                <a href="#">Admin</a>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="/orders">Orders</Link>
-                    <Link to="/products">Products</Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-            </div>
+            <Link to='/cart' >Cart[{cartItems.length}]</Link>
+            {
+                userInfo  ? <Link to='/profile'>{userInfo.name}</Link>:
+                <Link to='/signin'>Sign In</Link>
+            }
+          {userInfo && userInfo.isAdmin && (
+          <div className="dropdown">
+            <a href="#">Admin</a>
+            <ul className="dropdown-content">
+              <li>
+                <Link to="/orders">Orders</Link>
+                <Link to="/products">Products</Link>
+              </li>
+            </ul>
+          </div>
+        )}
+        </div>
+         )}
         </header>
         <aside className="sidebar">
             <h3>Shopping Categories</h3>

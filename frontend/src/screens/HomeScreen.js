@@ -3,33 +3,47 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import { Link } from 'react-router-dom';
-import { addToCart, removeFromCart } from '../actions/cartActions';
+import { addToCart, listCarts, removeFromCart } from '../actions/cartActions';
 
 function HomeScreen(props){
     const [searchKeyword, setSearchKeyword] = useState('');
     const [sortOrder, setSortOrder] = useState('');
     const category = props.match.params.id ? props.match.params.id : '';
-      const productList = useSelector(state => state.productList);
+    const productList = useSelector(state => state.productList);
     const {products, loading, error} = productList;
 
+    const cartList = useSelector(state => state.cartList);
+    const {cartItems, loading:loadingList, error:errorList} = cartList;
+    const userSignin = useSelector(state=>state.userSignin);
+    const {userInfo} = userSignin; 
+    
+    
     const cart = useSelector(state => state.cart);
-    const {cartItems} = cart;
+    const {loading:loadingSave, success: successSave, error:errorSave} = cart;
 
     const dispatch = useDispatch();
 
     useEffect(()=>{
         dispatch(listProducts(category));
+        dispatch(listCarts());
         return() => {
 
         };
     }, [category]);
 
-    const handleAddToCart = (e) => {
+
+    const handleAddToCart = async (e) => {
         e = e || window.event;
         e = e.target || e.srcElement;
         if (e.nodeName === 'BUTTON'){
-  //          props.history.push("/cart/" + e.id + '?Qty=' + x);
-            dispatch(addToCart(e.id,1));
+          if(!userInfo){
+            props.history.push("/signin?redirect=/");
+          }
+          else{
+            await dispatch(addToCart(e.id,1));
+            await dispatch(listCarts());
+          }
+          //          props.history.push("/cart/" + e.id + '?Qty=' + x);
         }
     };
 
@@ -37,10 +51,12 @@ function HomeScreen(props){
         e.preventDefault();
         dispatch(listProducts(category, searchKeyword, sortOrder));
     };
+
     const sortHandler = (e) => {
         setSortOrder(e.target.value);
         dispatch(listProducts(category, searchKeyword, e.target.value));
-    };
+      };
+
     const submitPlusHandler = async (e) => {
       e = e || window.event;
       e = e.target || e.srcElement;
@@ -53,7 +69,8 @@ function HomeScreen(props){
           else{
             x++;
             await dispatch(addToCart(e.id,x));
-        }
+            await dispatch(listCarts());
+          }
           inputObj.value = x;
           //dispatch(addToCart(e.id,x));
         }
@@ -71,12 +88,14 @@ function HomeScreen(props){
             if(x === '1'){
               inputObj.value = 0;
               await dispatch(removeFromCart(e.id));
+              await dispatch(listCarts());
             }
             else{
               --x;
               inputObj.value = x;
               await dispatch(addToCart(e.id,x));
-      }
+              await dispatch(listCarts());
+            }
          } 
     }
 }   
@@ -104,10 +123,10 @@ function HomeScreen(props){
             </select>
           </li>
         </ul>
-        {loading ? (
+        {(loading || loadingSave || loadingList) ? (
         <div>Loading...</div>
-      ) : error ? (
-        <div>{error}</div>
+      ) : (error||errorSave||errorList) ? (
+        <div>{(error||errorSave||errorList)}</div>
       ) : (
     <ul className="products">
     {
@@ -123,7 +142,7 @@ function HomeScreen(props){
                 <div className="product-price">₹{product.price}</div>
                 {(cartItems.find(x=>x.product === product._id)) ? <div>
                 <button className="button_plus_minus" type="button"  id={product._id} onClick={submitMinusHandler}>-</button>
-                <input className="product-input" min="0" max="5" name="quantity" type="number" id={product._id+"input"} defaultValue={cartItems.find(x=>x.product === product._id).qty}></input>
+                <input className="product-input" min="0" max="5" name="quantity" type="number" id={product._id+"input"} defaultValue={cartItems.find(x=>x.product === product._id).noOfItems}></input>
                 <button className="button_plus_minus" type="button" id={product._id} onClick={submitPlusHandler}>+</button>
                 </div> :
                 <button onClick = {handleAddToCart} className="button-add-to-cart" id={product._id} name={product._id}>Add to Cart</button>

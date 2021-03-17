@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import { deleteProduct, listProducts, saveProduct } from '../actions/productActions';
 import axios from "axios";
 import { deleteOrder, listOrders } from '../actions/orderActions';
 
@@ -9,7 +8,6 @@ function OrdersScreen(props) {
     const orderList = useSelector(state=>state.orderList);
     const {loading, orders, error} = orderList;
     const dispatch = useDispatch();
-    const itemCount = 0;
     
     const orderSave = useSelector(state=>state.orderSave);
     const {loading:loadingSave, success: successSave, error:errorSave} = orderSave;
@@ -40,7 +38,6 @@ function OrdersScreen(props) {
         <table className="table">
             <thead>
                 <tr>
-                    <th>Sl no</th>
                     <th>Order Date</th>
                     <th>User</th>
                     <th>No Of Items</th>
@@ -51,7 +48,6 @@ function OrdersScreen(props) {
             <tbody>
             {orders.map((order) => (
               <tr key={order._id}>
-                <td>{itemCount}</td>
                 <td>{order.orderDate}</td>
                 <td>{order.orderUserName}</td>
                 <td>{order.noOfItems}</td>

@@ -1,59 +1,67 @@
-import axios from "axios"
+import Axios from "axios"
 
-import { CART_SEND_WAHTSAPP_MSG, CART_ADD_ITEM, CART_REMOVE_ITEM, CART_REMOVEALL_ITEM } from "../constants/cartConstants";
+import { CART_SEND_WAHTSAPP_MSG, CART_REMOVE_ITEM, CART_REMOVEALL_ITEM, CART_SAVE_REQUEST, CART_SAVE_SUCCESS, CART_SAVE_FAIL, CART_DELETE_REQUEST, CART_DELETE_SUCCESS, CART_DELETE_FAIL, CART_LIST_REQUEST, CART_LIST_SUCCESS, CART_LIST_FAIL } from "../constants/cartConstants";
+
+const listCarts = () => async (dispatch,getState) => {
+    const {userSignin: {userInfo}} = getState();
+    try {
+      dispatch({ type: CART_LIST_REQUEST });
+      const { data } = await Axios.get('/api/carts',{headers: {username:(userInfo)?userInfo.name:'$NONAME'}});
+      dispatch({ type: CART_LIST_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: CART_LIST_FAIL, payload: error.message });
+    }
+  };
+
 
 const addToCart = (productId, qty) => async (dispatch, getState) => {
     try{
-        const {data} = await axios.get("/api/products/" + productId);
-        dispatch({type: CART_ADD_ITEM, payload:{
+        const {data} = await Axios.get("/api/products/" + productId);
+
+        const {userSignin: {userInfo}} = getState();
+        const cartItem = {
+            userName:userInfo.name,
             product: data._id,
             name: data.name,
             image:data.image,
             price:data.price,
             quantity:data.quantity,
             category:data.category,
-            qty
-        }})
-
-        const {cart: {cartItems}} = getState();
-        localStorage.setItem('cartItems',JSON.stringify(cartItems));
+            noOfItems: qty,
+        }
+        dispatch({type:CART_SAVE_REQUEST});
+        const {dataFromServer} = await Axios.post('/api/carts', cartItem, {
+            headers: {Authorization: 'Bearer ' + userInfo.token,} 
+        });
+        dispatch({type:CART_SAVE_SUCCESS, payload:dataFromServer});
     }
     catch(error){
-
+        dispatch({type: CART_SAVE_FAIL, payload:error.message});
     }
 }
 
 const removeFromCart = (productId) => async (dispatch, getState) => {
     try{
-        dispatch({type:CART_REMOVE_ITEM, payload:productId})
+        const {userSignin: {userInfo}} = getState();
 
-        const {cart: {cartItems}} = getState();
-        localStorage.setItem('cartItems',JSON.stringify(cartItems));
-    }
+        dispatch({type:CART_DELETE_REQUEST, payload:productId});
+        const {data} = await Axios.delete('/api/carts/'+ productId,  {
+            headers: {Authorization: 'Bearer ' + userInfo.token, username:userInfo.name} 
+        },);
+        dispatch({type:CART_DELETE_SUCCESS, payload:data,sucess:true});
+        }
     catch(error){
-
+        dispatch({type: CART_DELETE_FAIL, payload:error.message});
     }
 } 
-
-const removeAllCartContents = () => async (dispatch,getState) => {
-    try{
-        dispatch({type:CART_REMOVEALL_ITEM})
-
-        localStorage.removeItem('cartItems');
-        const {cart: {cartItems}} = getState();
-    }
-    catch(error){
-
-    }
-}
 
 const sendWhatsAppMessage = () => async (dispatch,getState) => {
     try{
         var messageTobeSend="", vegetablesString = "$$Vegetables:$$", groceryString="$$Grocery:$$", medicineString="$$Medicine:$$",stationnaryString="$$Stationary:$$",othersString="$$Others:$$";
-        const {cart: {cartItems}} = getState();
+        const {cartList: {cartItems}} = getState();
         cartItems.map( item => 
-            (item.category === "Vegetables")?(vegetablesString += ((item.qty === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.qty +' quantity'  + "$$"))):
-            (item.category === "Grocery")?(groceryString += ((item.qty === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.qty +' quantity'  + "$$"))):
+            (item.category === "Vegetables")?(vegetablesString += ((item.noOfItems === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.noOfItems +' quantity'  + "$$"))):
+            (item.category === "Grocery")?(groceryString += ((item.noOfItems === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.noOfItems +' quantity'  + "$$"))):
             (item.category === "Medicine")?(medicineString += (item.name + " " + item.quantity +"$$")):  
             (item.category === "Stationary")?(stationnaryString += (item.name + " " + item.quantity +"$$")):
             (othersString +=  (item.name + " " + item.quantity +"$$")));
@@ -63,7 +71,7 @@ const sendWhatsAppMessage = () => async (dispatch,getState) => {
                 ((medicineString === "$$Medicine:$$")?"":medicineString)+
                 ((stationnaryString === "$$Stationary:$$")?"":stationnaryString)+
                 ((othersString === "$$Others:$$")?"":stationnaryString));
-        const {data} = await axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
+        const {data} = await Axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
         localStorage.setItem("cartItemsString",messageTobeSend);
         dispatch({type:CART_SEND_WAHTSAPP_MSG})
         }
@@ -72,4 +80,4 @@ const sendWhatsAppMessage = () => async (dispatch,getState) => {
     }
 }
 
-export {addToCart, removeFromCart,sendWhatsAppMessage,removeAllCartContents};
+export {addToCart, removeFromCart,sendWhatsAppMessage,listCarts};
