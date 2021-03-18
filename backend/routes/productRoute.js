@@ -23,8 +23,10 @@ router.get('/', async (req, res) => {
     const sortOrder = req.query.sortOrder
       ? req.query.sortOrder === 'lowest'
         ? { price: 1 }
-        : { price: -1 }
-      : { _id: -1 };
+        : req.query.sortOrder === 'popularity'
+        ? {popularity:-1}
+          : { price: -1 }
+      :{ _id: -1 };
     const products = await Product.find({ ...category, ...searchKeyword }).sort(
       sortOrder
     );
@@ -51,14 +53,14 @@ router.post('/sendwhatsapp/:id', (req, res) => {
     var originalString = req.params.id;
     const newString = replaceAll(originalString,"$$","\n");  
     console.log(newString);
-/*    client.messages 
+    client.messages 
     .create({ 
        body: newString, 
        from: 'whatsapp:+14155238886',       
        to: 'whatsapp:+919845210251' 
      }) 
     .then(message => console.log(message.sid)) 
-    .done();*/
+    .done();
     return res.status(200).send({message: 'Messege sent to WhatsApp'});
 });
 
@@ -68,6 +70,7 @@ router.post("/", isAuth, isAdmin, async (req, res)=>{
         name: req.body.name,
         image:req.body.image,
         price:req.body.price,
+        popularity:req.body.popularity,
         category:req.body.category,
         quantity: req.body.quantity,
         description: req.body.description,
@@ -86,6 +89,7 @@ router.put("/:id", isAuth, isAdmin, async (req, res)=>{
         product.name = req.body.name;
         product.image = req.body.image;
         product.price = req.body.price;
+        product.popularity = req.body.popularity;
         product.category = req.body.category;
         product.quantity = req.body.quantity;
         product.description = req.body.description;

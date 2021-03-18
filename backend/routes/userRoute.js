@@ -38,7 +38,7 @@ router.post('/signin', async (req, res) => {
     }
 
     if(signinUser){
-        res.send({
+        return res.send({
             _id:signinUser._id,
             name:signinUser.name,
             email:signinUser.email,
@@ -47,7 +47,7 @@ router.post('/signin', async (req, res) => {
         })
     }
     else {
-        res.status(401).send({msg: 'Invalid e-mail or password'})
+        return res.status(401).send({msg: 'Invalid e-mail or password'})
     }
 })
 

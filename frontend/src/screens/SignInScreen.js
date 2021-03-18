@@ -2,16 +2,27 @@ import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { signin } from '../actions/userActions';
+import {validationSigninForm} from '../utils/validationForm';
 
 function SignInScreen(props) {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [values,setValues] = useState({
+        email:"",
+        password:"",
+        });
+    const [errors,setErrors] = useState({});
     const userSignin = useSelector(state=>state.userSignin);
     const {loading, userInfo, error} = userSignin;
+    
     const dispatch = useDispatch();
     const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
 
+    const handleChange = (e) => {
+        setValues({
+            ...values,
+            [e.target.name]:e.target.value,
+        })
+    }
 
     useEffect(()=>{
         if(userInfo){
@@ -23,7 +34,10 @@ function SignInScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(signin(email,password));
+        setErrors(validationSigninForm(values));
+        if (Object.keys(errors).length === 0 ) {
+            dispatch(signin(values.email,values.password));
+        }
     }
 
     return <div className="form">
@@ -40,13 +54,15 @@ function SignInScreen(props) {
                     <label htmlFor="email"> 
                     Email:
                     </label>
-                    <input type="email" name="email" id="email" onChange={(e)=>setEmail(e.target.value)}>
+                    <input type="email" name="email" id="email" onChange={handleChange}>
                     </input>
+                    {errors.email && <p className="errors">{errors.email}</p>}
                 </li>
                 <li>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" onChange={(e)=>setPassword(e.target.value)}>
+                    <input type="password" name="password" id="password" onChange={handleChange}>
                     </input>
+                    {errors.password && <p className="errors">{errors.password}</p>}
                 </li>
                 <li>
                     <button type="submit" className="button primary">Signin</button>

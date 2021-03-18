@@ -11,6 +11,7 @@ function ProductsScreen(props) {
     const [name, setName] = useState('');
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
+    const [popularity, setPopularity] = useState(0);
     const [category, setCategory] = useState('');
     const [quantity, setQuantity] = useState('');
     const [description, setDescription] = useState('');
@@ -38,6 +39,7 @@ function ProductsScreen(props) {
         setName(product.name);
         setPrice(product.price);
         setImage(product.image);
+        setPopularity(product.popularity);
         setCategory(product.category);
         setQuantity(product.quantity);
         setDescription(product.description);
@@ -45,7 +47,7 @@ function ProductsScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(saveProduct({_id:id, name,price, image, category, quantity,description}));
+        dispatch(saveProduct({_id:id, name,price, image, category, popularity, quantity,description}));
     }
 
     const deleteHandler = (product) => {
@@ -117,6 +119,13 @@ function ProductsScreen(props) {
                     {uploading && <div>Uploading...</div>}
                 </li>
                 <li>
+                    <label htmlFor="popularity"> 
+                    Popularity:
+                    </label>
+                    <input type="text" value={popularity} name="popularity" id="popularity" onChange={(e)=>setPopularity(e.target.value)}>
+                    </input>
+                </li>
+                <li>
                     <label htmlFor="category"> 
                     Category:
                     </label>
@@ -167,6 +176,7 @@ function ProductsScreen(props) {
                     <th>ID</th>
                     <th>Name</th>
                     <th>Price</th>
+                    <th>Popularity</th>
                     <th>Category</th>
                     <th>Quantity</th>
                     <th>Action</th>
@@ -178,6 +188,7 @@ function ProductsScreen(props) {
                 <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>
+                <td>{product.popularity}</td>
                 <td>{product.category}</td>
                 <td>{product.quantity}</td>
                 <td>

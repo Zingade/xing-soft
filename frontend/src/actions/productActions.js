@@ -4,7 +4,7 @@ import { PRODUCT_DELETE_FAIL, PRODUCT_DELETE_REQUEST, PRODUCT_DELETE_SUCCESS, PR
 const listProducts = (
     category = '',
     searchKeyword = '',
-    sortOrder = ''
+    sortOrder = 'popularity'
   ) => async (dispatch) => {
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });

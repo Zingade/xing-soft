@@ -2,17 +2,29 @@ import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import { register } from '../actions/userActions';
+import {validationRegisterForm} from '../utils/validationForm';
 
 function RegisterScreen(props) {
 
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [rePassword, setRePassword] = useState('');
+    const [values,setValues] = useState({
+        name:"",
+        email:"",
+        password:"",
+        rePassword:"",
+        });
+    const [errors,setErrors] = useState({});
     const userRegister = useSelector(state=>state.userRegister);
     const {loading, userInfo, error} = userRegister;
+
     const dispatch = useDispatch();
     const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
+    const handleChange = (e) => {
+        setValues({
+            ...values,
+            [e.target.name]:e.target.value,
+        })
+    }
 
     useEffect(()=>{
         if(userInfo){
@@ -24,7 +36,10 @@ function RegisterScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(register(name, email, password));
+        setErrors(validationRegisterForm(values));
+        if (Object.keys(errors).length === 0 ) {
+            dispatch(register(values.name, values.email, values.password));
+        }
     }
 
     return <div className="form">
@@ -41,25 +56,29 @@ function RegisterScreen(props) {
                     <label htmlFor="name"> 
                     Name:
                     </label>
-                    <input type="name" name="name" id="name" onChange={(e)=>setName(e.target.value)}>
+                    <input type="name" name="name" id="name" value={values.name} onChange={handleChange}>
                     </input>
+                    {errors.name && <p className="errors">{errors.name}</p>}
                 </li>
                 <li>
                     <label htmlFor="email"> 
                     Email:
                     </label>
-                    <input type="email" name="email" id="email" onChange={(e)=>setEmail(e.target.value)}>
+                    <input type="email" name="email" id="email" value={values.email} onChange={handleChange}>
                     </input>
+                    {errors.email && <p className="errors">{errors.email}</p>}
                 </li>
                 <li>
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="password" onChange={(e)=>setPassword(e.target.value)}>
+                    <input type="password" name="password" id="password" value={values.password} onChange={handleChange}>
                     </input>
+                    {errors.password && <p className="errors">{errors.password}</p>}
                 </li>
                 <li>
                     <label htmlFor="rePassword">Re-Enter Password</label>
-                    <input type="password" name="rePassword" id="rePassword" onChange={(e)=>setRePassword(e.target.value)}>
+                    <input type="password" name="rePassword" id="rePassword" value={values.rePassword} onChange={handleChange}>
                     </input>
+                    {errors.rePassword && <p className="errors">{errors.rePassword}</p>}
                 </li>
                 <li>
                     <button type="submit" className="button primary">Register</button>

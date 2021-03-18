@@ -382,3 +382,7 @@ tbody>tr:nth-child(odd){
 .label_with_white_spaces{
   white-space: pre-wrap;
 }
+.errors{
+  color: red;
+  font-size: 1.5rem;
+}

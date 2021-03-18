@@ -116,8 +116,9 @@ function HomeScreen(props){
           </li>
           <li>
             Sort By{' '}
-            <select name="sortOrder" onChange={sortHandler}>
+            <select name="sortOrder" defaultValue="popularity" onChange={sortHandler}>
               <option value="">Newest</option>
+              <option value="popularity">Popularity</option>
               <option value="lowest">Lowest</option>
               <option value="highest">Highest</option>
             </select>
