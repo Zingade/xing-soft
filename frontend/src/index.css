@@ -358,8 +358,13 @@ tbody>tr:nth-child(odd){
   justify-content: space-between;
   align-items: center;
 }
-.filter input,
-.filter button,
+.filter input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #c0c0c0 solid;
+  font-size: 1.6rem;
+  max-width: 8rem;
+}
 .filter select {
   padding: 1rem;
   border-radius: 0.5rem;
