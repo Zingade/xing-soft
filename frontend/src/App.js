@@ -63,19 +63,22 @@ function App() {
             <button className="sidebar-close-button" onClick={closeMenu}>x</button>
                 <ul className="categories">
                     <li>
-                        <Link to="/category/Vegetables">Vegetables</Link>
+                        <Link to="/category/Vegetables" onClick={closeMenu}>Vegetables</Link>
                     </li>
                     <li>
-                        <Link to="/category/Grocery">Grocery</Link>
+                        <Link to="/category/FreshFruits" onClick={closeMenu}>Fresh Fruits</Link>
                     </li>
                     <li>
-                        <Link to="/category/Medicine">Medicine</Link>
+                        <Link to="/category/Grocery" onClick={closeMenu}>Grocery</Link>
                     </li>
                     <li>
-                        <Link to="/category/Stationary">Stationary</Link>
+                        <Link to="/category/Medicine" onClick={closeMenu}>Medicine</Link>
                     </li>
                     <li>
-                        <Link to="/category/Others">Others</Link>
+                        <Link to="/category/Stationary" onClick={closeMenu}>Stationary</Link>
+                    </li>
+                    <li>
+                        <Link to="/category/Others" onClick={closeMenu}>Others</Link>
                     </li>
                 </ul>
         </aside>

@@ -129,12 +129,13 @@ function ProductsScreen(props) {
                     <label htmlFor="category"> 
                     Category:
                     </label>
-                    <select value={category} name="cateogory" id="cateogory" onChange={(e)=>setCategory(e.target.value)}>
-                        <option>Vegetables</option>
-                        <option>Grocery</option>
-                        <option>Medicine</option>
-                        <option>Stationary</option>
-                        <option>Others</option>
+                    <select value={category} name="cateogory" id="cateogory" defaultValue="Vegetables" onChange={(e)=>setCategory(e.target.value)}>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="FreshFruits">FreshFruits</option>
+                        <option value="Grocery">Grocery</option>
+                        <option  value="Medicine">Medicine</option>
+                        <option  value="Stationary">Stationary</option>
+                        <option value="Others">Others</option>
                     </select>
                 </li>
                 <li>

@@ -6,74 +6,76 @@ import { Link } from 'react-router-dom';
 import { addToCart, listCarts, removeFromCart } from '../actions/cartActions';
 
 function HomeScreen(props){
-    const [searchKeyword, setSearchKeyword] = useState('');
-    const [sortOrder, setSortOrder] = useState('');
-    const category = props.match.params.id ? props.match.params.id : '';
-    const productList = useSelector(state => state.productList);
-    const {products, loading, error} = productList;
+const [searchKeyword, setSearchKeyword] = useState('');
+const [sortOrder, setSortOrder] = useState('');
+const category = props.match.params.id ? props.match.params.id : '';
+const productList = useSelector(state => state.productList);
+const {products, loading, error} = productList;
 
-    const cartList = useSelector(state => state.cartList);
-    const {cartItems, loading:loadingList, error:errorList} = cartList;
-    const userSignin = useSelector(state=>state.userSignin);
-    const {userInfo} = userSignin; 
-    
-    
-    const cart = useSelector(state => state.cart);
-    const {loading:loadingSave, success: successSave, error:errorSave} = cart;
-
-    const dispatch = useDispatch();
-
-    useEffect(()=>{
-        dispatch(listProducts(category));
-        dispatch(listCarts());
-        return() => {
-
-        };
-    }, [category]);
+const cartList = useSelector(state => state.cartList);
+const {cartItems, loading:loadingList, error:errorList} = cartList;
+const userSignin = useSelector(state=>state.userSignin);
+const {userInfo} = userSignin; 
 
 
-    const handleAddToCart = async (e) => {
-        e = e || window.event;
-        e = e.target || e.srcElement;
-        if (e.nodeName === 'BUTTON'){
-          if(!userInfo){
-            props.history.push("/signin?redirect=/");
-          }
-          else{
-            await dispatch(addToCart(e.id,1));
-            await dispatch(listCarts());
-          }
-          //          props.history.push("/cart/" + e.id + '?Qty=' + x);
-        }
-    };
+const cart = useSelector(state => state.cart);
+const {loading:loadingSave, success: successSave, error:errorSave} = cart;
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        dispatch(listProducts(category, searchKeyword, sortOrder));
-    };
+const dispatch = useDispatch();
 
-    const sortHandler = (e) => {
-        setSortOrder(e.target.value);
-        dispatch(listProducts(category, searchKeyword, e.target.value));
+  useEffect(()=>{
+      dispatch(listProducts(category));
+      dispatch(listCarts());
+      return() => {
+
       };
+  }, [category]);
 
-    const submitPlusHandler = async (e) => {
+
+  const handleAddToCart = async (e) => {
       e = e || window.event;
       e = e.target || e.srcElement;
       if (e.nodeName === 'BUTTON'){
-          const inputObj = document.getElementById(e.id+'input');
-          var x =  inputObj.value; 
-          if (x === '5') {
-            x = 5;
-          }
-          else{
-            x++;
-            await dispatch(addToCart(e.id,x));
-            await dispatch(listCarts());
-          }
-          inputObj.value = x;
-          //dispatch(addToCart(e.id,x));
+        if(!userInfo){
+          props.history.push("/signin?redirect=/");
         }
+        else{
+          await dispatch(addToCart(e.id,1));
+          await dispatch(listCarts());
+        }
+        //          props.history.push("/cart/" + e.id + '?Qty=' + x);
+      }
+  };
+
+  const sortHandler = (e) => {
+      setSortOrder(e.target.value);
+      dispatch(listProducts(category, searchKeyword, e.target.value));
+    };
+
+  const submitPlusHandler = async (e) => {
+    e = e || window.event;
+    e = e.target || e.srcElement;
+    if (e.nodeName === 'BUTTON'){
+        const inputObj = document.getElementById(e.id+'input');
+        var x =  inputObj.value; 
+        if (x === '5') {
+          x = 5;
+        }
+        else{
+          x++;
+          await dispatch(addToCart(e.id,x));
+          await dispatch(listCarts());
+        }
+        inputObj.value = x;
+        //dispatch(addToCart(e.id,x));
+      }
+  }
+
+  const searchContentHandler = (e) => {
+    e.preventDefault();
+    const searchValue = (e.target.value.length >= 2 )?e.target.value:'';
+    setSearchKeyword(searchValue);
+    dispatch(listProducts(category, searchValue, sortOrder));
   }
 
   const submitMinusHandler = async (e) => {
@@ -98,63 +100,61 @@ function HomeScreen(props){
             }
          } 
     }
-}   
+  }    
 
-    return (
-        <>
-        {category && <h2>{category}</h2>}
-  
-        <ul className="filter">
-          <li>
-            <form onSubmit={submitHandler}>
-              <input
-                name="searchKeyword"
-                onChange={(e) => setSearchKeyword(e.target.value)}
-              />
-              <button type="submit">Search</button>
-            </form>
-          </li>
-          <li>
-            Sort By{' '}
-            <select name="sortOrder" defaultValue="popularity" onChange={sortHandler}>
-              <option value="">Newest</option>
-              <option value="popularity">Popularity</option>
-              <option value="lowest">Lowest</option>
-              <option value="highest">Highest</option>
-            </select>
-          </li>
-        </ul>
-        {(loading || loadingSave || loadingList) ? (
-        <div>Loading...</div>
-      ) : (error||errorSave||errorList) ? (
-        <div>{(error||errorSave||errorList)}</div>
-      ) : (
-    <ul className="products">
-    {
-        (!products.length)?
-            <h3>No products available</h3>:
-        //{cartItems.find(x=>x.product === product._id)
-        products.map(product => 
-        <li key={product._id}> 
-            <div className = "product">
-                <img className="product-image" src={product.image} alt="products"></img>
-                <div className="product-name">{product.name}</div>
-                <div className="product-name">{product.quantity}</div>
-                <div className="product-price">₹{product.price}</div>
-                {(cartItems.find(x=>x.product === product._id)) ? <div>
-                <button className="button_plus_minus" type="button"  id={product._id} onClick={submitMinusHandler}>-</button>
-                <input className="product-input" min="0" max="5" name="quantity" type="number" id={product._id+"input"} defaultValue={cartItems.find(x=>x.product === product._id).noOfItems}></input>
-                <button className="button_plus_minus" type="button" id={product._id} onClick={submitPlusHandler}>+</button>
-                </div> :
-                <button onClick = {handleAddToCart} className="button-add-to-cart" id={product._id} name={product._id}>Add to Cart</button>
-              }
-            </div>
-        </li>)
-    }
-    </ul>
-      )}
-      </>
-    );
+  return (
+      <>
+      {category && <h2>{category}</h2>}
+
+      <ul className="filter">
+        <li>
+          <label htmlFor="search"> 
+          Search:{' '} 
+          </label>
+          <input
+            name="searchKeyword"
+            onChange={searchContentHandler}
+          />
+          Sort By:{' '}
+          <select name="sortOrder" defaultValue="popularity" onChange={sortHandler}>
+            <option value="">Newest</option>
+            <option value="popularity">Popularity</option>
+            <option value="lowest">Lowest</option>
+            <option value="highest">Highest</option>
+          </select>
+        </li>
+      </ul>
+      {(loading || loadingSave || loadingList) ? (
+      <div>Loading...</div>
+    ) : (error||errorSave||errorList) ? (
+      <div>{(error||errorSave||errorList)}</div>
+    ) : (
+  <ul className="products">
+  {
+      (!products.length)?
+          <h3>No products available</h3>:
+      //{cartItems.find(x=>x.product === product._id)
+      products.map(product => 
+      <li key={product._id}> 
+          <div className = "product">
+              <img className="product-image" src={product.image} alt="products"></img>
+              <div className="product-name">{product.name}</div>
+              <div className="product-name">{product.quantity}</div>
+              <div className="product-price">₹{product.price}</div>
+              {(cartItems.find(x=>x.product === product._id)) ? <div>
+              <button className="button_plus_minus" type="button"  id={product._id} onClick={submitMinusHandler}>-</button>
+              <input className="product-input" min="0" max="5" name="quantity" type="number" id={product._id+"input"} defaultValue={cartItems.find(x=>x.product === product._id).noOfItems}></input>
+              <button className="button_plus_minus" type="button" id={product._id} onClick={submitPlusHandler}>+</button>
+              </div> :
+              <button onClick = {handleAddToCart} className="button-add-to-cart" id={product._id} name={product._id}>Add to Cart</button>
+            }
+          </div>
+      </li>)
+  }
+  </ul>
+    )}
+    </>
+  );
 }
 
 export default HomeScreen;
