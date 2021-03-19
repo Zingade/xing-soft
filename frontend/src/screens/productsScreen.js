@@ -135,6 +135,7 @@ function ProductsScreen(props) {
                         <option value="Grocery">Grocery</option>
                         <option  value="Medicine">Medicine</option>
                         <option  value="Stationary">Stationary</option>
+                        <option value="KidsZone">KidsZone</option>
                         <option value="Others">Others</option>
                     </select>
                 </li>

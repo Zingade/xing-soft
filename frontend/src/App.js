@@ -78,6 +78,9 @@ function App() {
                         <Link to="/category/Stationary" onClick={closeMenu}>Stationary</Link>
                     </li>
                     <li>
+                        <Link to="/category/KidsZone" onClick={closeMenu}>KidsZone</Link>
+                    </li>
+                    <li>
                         <Link to="/category/Others" onClick={closeMenu}>Others</Link>
                     </li>
                 </ul>
