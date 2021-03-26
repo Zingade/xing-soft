@@ -4,6 +4,7 @@ import thunk from 'redux-thunk'
 import { cartDeleteReducer, cartListReducer, cartSaveReducer } from './reducers/cartReducers';
 import { userCreateAdminReducer, userRegisterReducer, userSigninReducer, userUpdateReducer } from './reducers/userReducers';
 import { orderDeleteReducer, orderListReducer, orderSaveReducer } from './reducers/orderReducers';
+import { expenseDeleteReducer, expenseListReducer, expenseSaveReducer } from './reducers/expenseReducers';
 
 const userInfoJSON = localStorage.getItem('userInfo');
 const userInfo = JSON.parse(userInfoJSON) || null;
@@ -23,6 +24,9 @@ const reducer = combineReducers({
     orderSave:orderSaveReducer,
     orderDelete:orderDeleteReducer,
     cartList: cartListReducer,
+    expenseList: expenseListReducer,
+    expenseSave: expenseSaveReducer,
+    expenseDelete: expenseDeleteReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

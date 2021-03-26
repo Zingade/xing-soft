@@ -175,6 +175,7 @@ function ProductsScreen(props) {
         <table className="table">
             <thead>
                 <tr>
+                    <th>Sl no</th>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Price</th>
@@ -185,8 +186,9 @@ function ProductsScreen(props) {
                 </tr>
             </thead>
             <tbody>
-            {products.map((product) => (
+            {products.map((product,count) => (
               <tr key={product._id}>
+                <td>{count+1}</td>
                 <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>

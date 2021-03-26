@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const uploadRoute = require('./routes/uploadRoute');
 const orderRoute = require('./routes/orderRoute');
 const cartRoute = require('./routes/cartRoute');
+const expenseRoute = require('./routes/expenseRoute')
 
 const port = process.env.PORT || 5000;
 const mongodbUrl = process.env.MONGODB_URL || 'mongodb://localhost/xing-shop';
@@ -23,6 +24,7 @@ app.use('/api/products', productRoute);
 app.use('/api/uploads', uploadRoute);
 app.use('/api/orders', orderRoute);
 app.use('/api/carts', cartRoute);
+app.use('/api/expenses', expenseRoute);
 
 app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
 app.use(express.static(path.join(__dirname, '../frontend/build')))

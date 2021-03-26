@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom';
+import {format} from 'date-fns';
 import {useSelector, useDispatch} from 'react-redux';
 import axios from "axios";
 import { deleteOrder, listOrders } from '../actions/orderActions';
@@ -38,6 +38,7 @@ function OrdersScreen(props) {
         <table className="table">
             <thead>
                 <tr>
+                    <th>Sl no</th>
                     <th>Order Date</th>
                     <th>User</th>
                     <th>No Of Items</th>
@@ -46,9 +47,10 @@ function OrdersScreen(props) {
                 </tr>
             </thead>
             <tbody>
-            {orders.map((order) => (
+            {orders.map((order,count) => (
               <tr key={order._id}>
-                <td>{order.orderDate}</td>
+                <td>{count+1}</td>
+                <td>{format(new Date(order.orderDate),"dd/MMM/yyyy")}</td>
                 <td>{order.orderUserName}</td>
                 <td>{order.noOfItems}</td>
                 <td>{order.aproxPrice}</td>

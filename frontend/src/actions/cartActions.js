@@ -57,20 +57,24 @@ const removeFromCart = (productId) => async (dispatch, getState) => {
 
 const sendWhatsAppMessage = () => async (dispatch,getState) => {
     try{
-        var messageTobeSend="", vegetablesString = "$$Vegetables:$$", groceryString="$$Grocery:$$", medicineString="$$Medicine:$$",stationnaryString="$$Stationary:$$",othersString="$$Others:$$";
+        var messageTobeSend="", vegetablesString = "$$Vegetables:$$", freshFruitsString="$$FreshFruits:$$",kidszoneString="$$KidsZone:$$",groceryString="$$Grocery:$$", medicineString="$$Medicine:$$",stationnaryString="$$Stationary:$$",othersString="$$Others:$$";
         const {cartList: {cartItems}} = getState();
         cartItems.map( item => 
             (item.category === "Vegetables")?(vegetablesString += ((item.noOfItems === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.noOfItems +' quantity'  + "$$"))):
             (item.category === "Grocery")?(groceryString += ((item.noOfItems === 1)?(item.name + " " + item.quantity +"$$"):(item.name + " " + item.quantity + ' x ' + item.noOfItems +' quantity'  + "$$"))):
             (item.category === "Medicine")?(medicineString += (item.name + " " + item.quantity +"$$")):  
             (item.category === "Stationary")?(stationnaryString += (item.name + " " + item.quantity +"$$")):
+            (item.category === "KidsZone")?(kidszoneString += (item.name + " " + item.quantity +"$$")):
+            (item.category === "FreshFruits")?(freshFruitsString += (item.name + " " + item.quantity +"$$")):
             (othersString +=  (item.name + " " + item.quantity +"$$")));
             messageTobeSend += (
                 ((vegetablesString === "$$Vegetables:$$")?"":vegetablesString)+
                 ((groceryString === "$$Grocery:$$")?"":groceryString)+
                 ((medicineString === "$$Medicine:$$")?"":medicineString)+
                 ((stationnaryString === "$$Stationary:$$")?"":stationnaryString)+
-                ((othersString === "$$Others:$$")?"":stationnaryString));
+                ((kidszoneString === "$$KidsZone:$$")?"":kidszoneString)+
+                ((freshFruitsString === "$$FreshFruits:$$")?"":freshFruitsString)+
+                ((othersString === "$$Others:$$")?"":othersString));
         const {data} = await Axios.post("/api/products/sendwhatsapp/" + messageTobeSend);
         localStorage.setItem("cartItemsString",messageTobeSend);
         dispatch({type:CART_SEND_WAHTSAPP_MSG})
