@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import { Link } from 'react-router-dom';
 import { addToCart, listCarts, removeFromCart } from '../actions/cartActions';
+import { useTranslation } from 'react-i18next'
 
 function HomeScreen(props){
 const [searchKeyword, setSearchKeyword] = useState('');
@@ -16,6 +17,7 @@ const cartList = useSelector(state => state.cartList);
 const {cartItems, loading:loadingList, error:errorList} = cartList;
 const userSignin = useSelector(state=>state.userSignin);
 const {userInfo} = userSignin; 
+const { t } = useTranslation();
 
 
 const cart = useSelector(state => state.cart);
@@ -138,7 +140,7 @@ const dispatch = useDispatch();
       <li key={product._id}> 
           <div className = "product">
               <img className="product-image" src={product.image} alt="products"></img>
-              <div className="product-name">{product.name}</div>
+              <div className="product-name">{t(product.name)}</div>
               <div className="product-name">{product.quantity}</div>
               <div className="product-price">₹{product.price}</div>
               {(cartItems.find(x=>x.product === product._id)) ? <div>

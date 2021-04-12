@@ -10,8 +10,13 @@ import ProductsScreen from './screens/productsScreen';
 import ExpenseScreen from './screens/ExpenseScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next'
+import {languages} from './utils/languages'
 
 function App() {
+
+    const { t } = useTranslation();
 
     const userSignin = useSelector(state=>state.userSignin);
     const {userInfo} = userSignin; 
@@ -35,7 +40,7 @@ function App() {
                 <button onClick= {openMenu}>
                     &#9776;
                 </button>
-                <Link className="brand" to="/">xingShop</Link>
+                <Link className="brand" to="/">{t('xingShop')}</Link>
             </div>
             {loading?<div> </div>:
             (error)?error.message:(
@@ -45,6 +50,13 @@ function App() {
                 userInfo  ? <Link to='/profile'>{userInfo.name}</Link>:
                 <Link to='/signin'>Sign In</Link>
             }
+          <div className="dropdown">
+          <select className="lang_select" name="langSelect" defaultValue="en" onClick={(e) => i18next.changeLanguage(e.target.value)}>
+              {languages.map(({code, name}) =>
+                    <option className="lang_select" value={code}>{name}</option>
+            )}
+          </select>
+          </div>
           {userInfo && userInfo.isAdmin && (
           <div className="dropdown">
             <a href="#">Admin</a>

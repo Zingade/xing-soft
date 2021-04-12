@@ -33,6 +33,7 @@ button {
   align-items: center;
   padding: 0.5rem;
 }
+
 .brand{
   color: #ffffff;
   font-size: 2.5rem;
@@ -390,4 +391,9 @@ tbody>tr:nth-child(odd){
 .errors{
   color: red;
   font-size: 1.5rem;
+}
+.lang_select{
+  color: #ffffff;
+  background-color: #203040;
+  font: 1.6rem Helvetica;
 }
