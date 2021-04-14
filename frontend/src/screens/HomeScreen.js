@@ -106,23 +106,23 @@ const dispatch = useDispatch();
 
   return (
       <>
-      {category && <h2>{category}</h2>}
+      {category && <h2>{t(category)}</h2>}
 
       <ul className="filter">
         <li>
           <label htmlFor="search"> 
-          Search:{' '} 
+          {t("Search")}:{' '} 
           </label>
           <input
             name="searchKeyword"
             onChange={searchContentHandler}
           />
-          Sort By:{' '}
+          {t("Sort By")}:{' '}
           <select name="sortOrder" defaultValue="popularity" onChange={sortHandler}>
-            <option value="">Newest</option>
-            <option value="popularity">Popularity</option>
-            <option value="lowest">Lowest</option>
-            <option value="highest">Highest</option>
+            <option value="">{t("Newest")}</option>
+            <option value="popularity">{t("Popularity")}</option>
+            <option value="lowest">{t("Lowest")}</option>
+            <option value="highest">{t("Highest")}</option>
           </select>
         </li>
       </ul>
@@ -141,14 +141,14 @@ const dispatch = useDispatch();
           <div className = "product">
               <img className="product-image" src={product.image} alt="products"></img>
               <div className="product-name">{t(product.name)}</div>
-              <div className="product-name">{product.quantity}</div>
+              <div className="product-name">{t(product.quantity)}</div>
               <div className="product-price">₹{product.price}</div>
               {(cartItems.find(x=>x.product === product._id)) ? <div>
               <button className="button_plus_minus" type="button"  id={product._id} onClick={submitMinusHandler}>-</button>
               <input className="product-input" min="0" max="5" name="quantity" type="number" id={product._id+"input"} defaultValue={cartItems.find(x=>x.product === product._id).noOfItems}></input>
               <button className="button_plus_minus" type="button" id={product._id} onClick={submitPlusHandler}>+</button>
               </div> :
-              <button onClick = {handleAddToCart} className="button-add-to-cart" id={product._id} name={product._id}>Add to Cart</button>
+              <button onClick = {handleAddToCart} className="button-add-to-cart" id={product._id} name={product._id}>{t("Add to Cart")}</button>
             }
           </div>
       </li>)

@@ -31,6 +31,14 @@ function App() {
         document.querySelector(".sidebar").classList.remove("open")
     }
     
+    const changeLanguage = (e) => {
+        if(e.target.value == "kn")
+            i18next.changeLanguage("kn")
+        else if (e.target.value == "mt")
+            i18next.changeLanguage("mt")
+        else
+            i18next.changeLanguage("en")
+    }
 
   return (
     <BrowserRouter>
@@ -45,15 +53,15 @@ function App() {
             {loading?<div> </div>:
             (error)?error.message:(
             <div className="header-links">
-            <Link to='/cart' >Cart[{cartItems.length}]</Link>
+            <Link to='/cart' >{t("Cart")}[{cartItems.length}]</Link>
             {
                 userInfo  ? <Link to='/profile'>{userInfo.name}</Link>:
                 <Link to='/signin'>Sign In</Link>
             }
           <div className="dropdown">
-          <select className="lang_select" name="langSelect" defaultValue="en" onClick={(e) => i18next.changeLanguage(e.target.value)}>
+          <select className="lang_select" name="langSelect" defaultValue="en" onClick={changeLanguage}>
               {languages.map(({code, name}) =>
-                    <option className="lang_select" value={code}>{name}</option>
+                    <option key={name} className="lang_select" value={code}>{name}</option>
             )}
           </select>
           </div>
@@ -73,29 +81,29 @@ function App() {
          )}
         </header>
         <aside className="sidebar">
-            <h3>Shopping Categories</h3>
+            <h3>{t("Shopping Categories")}</h3>
             <button className="sidebar-close-button" onClick={closeMenu}>x</button>
                 <ul className="categories">
                     <li>
-                        <Link to="/category/Vegetables" onClick={closeMenu}>Vegetables</Link>
+                        <Link to="/category/Vegetables" onClick={closeMenu}>{t("Vegetables")}</Link>
                     </li>
                     <li>
-                        <Link to="/category/FreshFruits" onClick={closeMenu}>Fresh Fruits</Link>
+                        <Link to="/category/FreshFruits" onClick={closeMenu}>{t("FreshFruits")}</Link>
                     </li>
                     <li>
-                        <Link to="/category/Grocery" onClick={closeMenu}>Grocery</Link>
+                        <Link to="/category/Grocery" onClick={closeMenu}>{t("Grocery")}</Link>
                     </li>
                     <li>
-                        <Link to="/category/Medicine" onClick={closeMenu}>Medicine</Link>
+                        <Link to="/category/Medicine" onClick={closeMenu}>{t("Medicine")}</Link>
                     </li>
                     <li>
-                        <Link to="/category/Stationary" onClick={closeMenu}>Stationary</Link>
+                        <Link to="/category/Stationary" onClick={closeMenu}>{t("Stationary")}</Link>
                     </li>
                     <li>
-                        <Link to="/category/KidsZone" onClick={closeMenu}>KidsZone</Link>
+                        <Link to="/category/KidsZone" onClick={closeMenu}>{t("KidsZone")}</Link>
                     </li>
                     <li>
-                        <Link to="/category/Others" onClick={closeMenu}>Others</Link>
+                        <Link to="/category/Others" onClick={closeMenu}>{t("Others")}</Link>
                     </li>
                 </ul>
         </aside>

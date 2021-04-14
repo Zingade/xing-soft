@@ -2,9 +2,11 @@ import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart, sendWhatsAppMessage, listCarts } from '../actions/cartActions';
 import { saveOrder } from '../actions/orderActions';
+import { useTranslation } from 'react-i18next'
 
 function CartScreen(props) {
 
+    const { t } = useTranslation();
     const cartList = useSelector(state => state.cartList);
     const {cartItems, loading, error} = cartList;
 
@@ -67,19 +69,19 @@ function CartScreen(props) {
                     <div>
                     <li>
                         <h3>
-                            Shopping Cart
+                            {t("Shopping Cart")}
                         </h3>
                         <div>
-                            Price
-                        </div> 
-                        <div>
-                            <button className="button primary" onClick ={()=>deleteAllCart()} disabled = {cartItems.length === 0}>Delete All</button>
+                            <button className="button primary" onClick ={()=>deleteAllCart()} disabled = {cartItems.length === 0}>{t("Delete All")}</button>
                         </div>
+                        <div>
+                            {t("Price")}
+                        </div> 
                     </li>
                     {
                         cartItems.length === 0 ? 
                         <div>
-                            Cart is empty;
+                            {t("Cart is empty")};
                         </div>
                         : 
                         cartItems.map( item => 
@@ -89,11 +91,11 @@ function CartScreen(props) {
                             </div>
                             <div className="cart-name">
                                 <div>
-                                    {item.name};
+                                    {t(item.name)};
                                 </div>
-                                {item.quantity} x {item.noOfItems} quantity     . 
+                                {t(item.quantity)} x {item.noOfItems} {t("quantity")}     . 
                                 <button type="button" className="button primary button_right" onClick={()=>removeFromCartHandler(item.product)}>
-                                    Delete
+                                    {t("Delete")}
                                 </button>
                             </div>
                             <div className="cart-price">
@@ -108,12 +110,12 @@ function CartScreen(props) {
         </div>
         <div className="cart-action">
             <h3>
-                Estimated Total ({cartItems.reduce((a,c) => a + 1 * c.noOfItems, 0)} items)
+                {t("Estimated Total")} ({cartItems.reduce((a,c) => a + 1 * c.noOfItems, 0)} {t("items")})
                 :
                 ₹{cartItems.reduce((a,c) => a + c.price * c.noOfItems, 0)}
             </h3>
             <button onClick = {checkOutHandler} className="button primary full-width" disabled = {cartItems.length === 0}>
-                Checkout and send WhatsApp
+                {t("Checkout and send WhatsApp")}
             </button>
         </div>
     </div>;
