@@ -13,11 +13,12 @@ import OrdersScreen from './screens/OrdersScreen';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next'
 import {languages} from './utils/languages'
+import cookies from 'js-cookie'
 
 function App() {
 
     const { t } = useTranslation();
-
+    const currentLanguageCode = cookies.get('i18next') || "en";
     const userSignin = useSelector(state=>state.userSignin);
     const {userInfo} = userSignin; 
 
@@ -31,11 +32,6 @@ function App() {
         document.querySelector(".sidebar").classList.remove("open")
     }
     
-    const changeLanguage = (e) => {
-        let languageSelect = e.target.value;
-        i18next.changeLanguage(languageSelect)    
-    }
-
   return (
     <BrowserRouter>
     <div className="grid-container">
@@ -55,7 +51,7 @@ function App() {
                 <Link to='/signin'>Sign In</Link>
             }
           <div className="dropdown">
-          <select className="lang_select" name="langSelect" defaultValue="en" onClick={changeLanguage}>
+          <select className="lang_select" name="langSelect" defaultValue={currentLanguageCode} onChange={(e) => i18next.changeLanguage(e.target.value)}>
               {languages.map(({code, name}) =>
                     <option key={name} className="lang_select" value={code}>{name}</option>
             )}
