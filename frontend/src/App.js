@@ -32,12 +32,8 @@ function App() {
     }
     
     const changeLanguage = (e) => {
-        if(e.target.value == "kn")
-            i18next.changeLanguage("kn")
-        else if (e.target.value == "mt")
-            i18next.changeLanguage("mt")
-        else
-            i18next.changeLanguage("en")
+        let languageSelect = e.target.value;
+        i18next.changeLanguage(languageSelect)    
     }
 
   return (
