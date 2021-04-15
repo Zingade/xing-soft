@@ -134,7 +134,7 @@ const dispatch = useDispatch();
   <ul className="products">
   {
       (!products.length)?
-          <h3>No products available</h3>:
+          <h3>{t("No products available")}</h3>:
       //{cartItems.find(x=>x.product === product._id)
       products.map(product => 
       <li key={product._id}> 
