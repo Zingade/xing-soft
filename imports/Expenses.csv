@@ -1,0 +1,518 @@
+﻿amount,details,expenseDate,card,requiredType,occurance,category
+434,APOLLO HOSPITALS ENTER BANGALORE IN (Medical),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+399,KISHAN HEALTHY FARM BANGALORE IN (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+250,SUBRAHMANYA ACHARYA BANGALORE IN (Medical),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+3000,LOTUS HOSPITAL BANGALORE IN(Medical),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+459,WWW OLACABS COM GURGAON IN (Local Transport),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+1380,BESCOM - AlA/C NO. 8426519000 (Bills),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1518,SRI RAJA RAJESHWARI FIL BENGALURU IN (Local Transport),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+198,KFC RESTAURANTS BANGALORE IN (Hotel),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Hotel
+548,KISHAN HEALTHY FARM BANGALORE IN (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+6441,DMART AVENUE SUPERMART BANGALORE IN (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+239,KFC RESTAURANTS BANGALORE IN (Hotel),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Hotel
+799,LIFE STYLE INTERNATION BANGALORE IN (Clothing),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+590,VILLAGE HYPER BAZAAR BANGALORE IN  (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+359,WWW OLACABS COM GURGAON IN (Local Transport),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+455,KISHAN HEALTHY FARM BANGALORE IN (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+338,HALL OF MEAT PRIVATE L BANGALORE IN (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+474,KISHAN HEALTHY FARM BANGALORE IN (Grocery),2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+591,Grocery,2020-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+3173,Birthday Party,2020-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+469,Amazon,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Grocery
+545,Amazon,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Grocery
+210,Amazon,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Grocery
+589,Airtel,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+5000,Home Expense,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+288,Swiggy,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Hotel
+1620,Milk refill,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+334,Cable TV,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1600,Stuti VAN,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+6000,Home Expense,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+350,Amazon,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Grocery
+10000,Home Expense,2020-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,Regular Monthly
+1000,Jacket for Stuti,2020-01-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Clothing
+1200,Office Expense,2020-01-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Hotel
+717,Pinky Purchase,2020-01-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Clothing
+1004,Birthday Gift,2020-01-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Gift
+2000,Transfer to Kundagol,2020-01-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Donation
+2895,Birthday Gift,2020-01-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Gift
+908,Health & Glow,2020-01-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Clothing
+5000,Home Expense,2020-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+6000,Home Expense,2020-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1600,Stuti VAN,2020-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+1500,SRI RAJA RAJESHWARI FILBENGALURUIN (Petrol),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+334,ATRIA CONVERGENCE TECHMUMBAIIN (Cable),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+531,Vegetables (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+670,OLA Cabs,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Local Transport
+340,ATO*R R VATIKABANGALOREIN (Hotel Dinner),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+573,Swiggy,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1710,Monthly milk,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1473,Bus booking to BGK,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Travel
+1410,BESCOM,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+2000,Cash for regular use,2020-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+244,Amazon,2020-02-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Clothing
+4000,Tailor expenses,2020-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Clothing
+710,Pinky Gift,2020-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Gift
+589,Airtel,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+5956,DMART AVENUE (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1677,VILLAGE HYPER (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+487,ATO*R R VATIKABANGALOREIN (Hotel Dinner),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+419,Vegetables (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+360,GANESH MEDICALS,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+99,KFC RESTAURANTS BANGALORE IN,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+800,Indigo for travel certificate ,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1118,OLA Cabs,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Local Transport
+611,SWIGGYBengaluruIN,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+423,GREEN HOUSEBANGALOREI (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+99,KFC RESTAURANTS BANGALORE IN,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+399,Airtel,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Regular Expenses
+399,Airtel,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Regular Expenses
+5000,Yelgur,2020-02-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,One Time
+220,Amazon (dustbin bags) (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+378,Haircut (Saket),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Regular Monthly
+189,Medicine (Medical),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+702,Vegetables (Grocery),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+276,Vegetables (Grocery),2020-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Grocery
+380,Amazon (Gift ),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+1619,Brew Kings (Hotel),2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+900,Zomato Membership,2020-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1574,Mintra (pinky),2020-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Clothing
+863,Cylender,2020-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,Recursive,Regular Expenses
+4800,Home Expense,2020-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+3200,Zing cash,2020-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+6000,Home Expense,2020-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1600,Stuti VAN,2020-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+299,ATRIA CONVERGENCE TECHMUMBAIIN (Cable),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+3156,Band factory (Shoes & Bag for Saket),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+386,Vegetables (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+238,APOLLO HOSPITALS ENTER BANGALORE IN (Medical),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+250,Cake (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1695,Monthly milk,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+7565,Saket books and uniform,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+859,OLA Cabs,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+1477,BESCOM,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+589,Airtel,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+6701,DMART AVENUE (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+365,Vegetables (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+236,Grocery,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+184,KFC RESTAURANTS BANGALORE IN,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Hotel
+1258,Hotel (Zing),2020-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Hotel
+1500,SRI RAJA RAJESHWARI FILBENGALURUIN (Petrol),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+1423,Grocery,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+572,Amazon (Book for Saket),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+386,Reliance fresh (Ice Cream) (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+453,Vegetables (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+142,Debit card charges,2020-03-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Yearly
+600,Recharge for Curd in App,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Regular Monthly
+595,Vegetables (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+49,Recharge mobile - pinky mammy,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Regular Monthly
+160,Courier for Saket shirt exchange,2020-03-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Education
+833,Grocery,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+386,T Shirt pinky,2020-03-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Clothing
+799,T Shirt pinky,2020-03-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Clothing
+232,APOLLO HOSPITALS ENTER BANGALORE IN (Medical),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+528,Vegetables (Grocery),2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1184,Grocery,2020-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+8000,Home Expense,2020-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+3200,Zing cash,2020-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1600,Stuti VAN,2020-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+314,ATRIA CONVERGENCE TECHMUMBAIIN (Cable),2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1800,Monthly milk,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+589,Airtel,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+5362,BBMP Property tax (20-21),2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Yearly
+1420,Grocery,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+744,Cooking gas,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Regular Monthly
+1389,BESCOM,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1159,Medicine (Medical),2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+399,Airtel,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Regular Expenses
+399,Airtel,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Regular Expenses
+5764,Grocery,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Grocery
+2360,Locker charges,2020-04-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Yearly
+650,Vegetables (Grocery),2020-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+520,Meat factory (Grocery),2020-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+250,Cake (Grocery),2020-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+462,Grocery,2020-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+7650,Home Expense,2020-05-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+2110,Zing cash,2020-05-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1200,Stuti dance tuition fee,2020-05-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+1600,Stuti VAN,2020-05-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+312,ATRIA CONVERGENCE TECHMUMBAIIN (Cable),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+5699,Grocery,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+2180,BESCOM,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+589,Airtel,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+760,Eye doctor for Saket (Medical),2020-05-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Medical
+120,Medicine for pinky (Medical),2020-05-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Medical
+205,Sub way for Saket,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+250,Mangoes (Grocery),2020-05-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1800,Monthly milk,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+2060,Grocery,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+1682,D Mart (Chairs + addon) (Grocery),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+660,Masks,2020-05-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Clothing
+1327,Grocery,2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+300,Mangoes (Grocery),2020-05-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+400,Doctor (Medical),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+948,Medicine (Medical),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+420,Cake (Grocery),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+353,Vegetables (Grocery),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+8286,DMART AVENUE (Grocery),2020-05-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+645,Grocery,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+7400,Home Expense,2020-06-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+2700,Zing cash,2020-06-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+312,ATRIA CONVERGENCE TECHMUMBAIIN (Cable),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+602,Cylender,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1838,BESCOM,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+269,Grocery,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+1470,Cooker,2020-06-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Grocery
+5121,Internet for 7 months,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Yearly
+337,Vegetables (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+589,Airtel,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+399,Airtel,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+399,Airtel,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+821,Gift to Golu,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+600,Stuti dance tuition fee,2020-06-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+2679,Saket Shoes,2020-06-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Clothing
+2000,Transfer to Kundagol,2020-06-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Donation
+1886,Milk refill,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+3599,Nurnary plants,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,One Time
+299,Vegetables (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+180,Snacks (Grocery),2020-06-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Grocery
+277,Stuti Stationary,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+546,Meat factory (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+300,Snacks (Grocery),2020-06-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+225,Rusk (Grocery),2020-06-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+916,Grocery,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+165,Medicine (Medical),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+465,Vegetables (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+80,Chips (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+798,"Stylus, Watch for Chinnni",2020-06-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+1483,Chinni's shrts,2020-06-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Clothing
+5147,Grocery,2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+190,Chips (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+325,Vegetables (Grocery),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+420,Snacks (Grocery),2020-06-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1143,Medicines (Medical),2020-06-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+660,Notebook,2020-06-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Education
+1500,Petrol,2020-06-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+6800,Home Expense,2020-07-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+4300,Cash for regular use,2020-07-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+313,ATRIA CONVERGENCE TECHMUMBAIIN (Cable),2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1710,Milk refill,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1730,BESCOM,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+867,Grocery,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+175,Medicine (Medical),2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Medical
+120,Chips (Grocery),2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+101,Extra milk,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Regular Monthly
+589,Airtel,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+8316,Stuti Books,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+1506,Grocery,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+600,Stuti dance tuition fee,2020-07-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+550,Saket Book,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Education
+590,Dry fruits (Grocery),2020-07-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Grocery
+270,Chinni birthday ,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+300,Snacks (Grocery),2020-07-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1317,Grocery,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+580,Bakery items (Grocery),2020-07-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+899,Saket Sweat shirt,2020-07-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+1478,Manya gift and Pinky dress,2020-07-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Nice,One Time,Gift
+1694,Elica burner,2020-07-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,One Time
+5000,Home Expense,2020-08-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+2410,Cash for regular use,2020-08-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1498,Stuti Mobile recharge,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Regular Monthly
+314,Cable TV,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1093,Grocery,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+270,Stationaries,2020-08-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Education
+467,Grocery,2020-08-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Grocery
+950,Chinni Cake (Grocery),2020-08-01T11:08:39.000+00:00,Pinky HDFC Debit Card,Must,One Time,Grocery
+1636,BESCOM,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+2792,Milk refill,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1387,Zing/Saket/Pinky Mobile Recharge,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Regular Monthly
+197,Medicine (Medical),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+292,Vegetables (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+320,Chips (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+959,Grocery,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+2196,Bata slippers,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+600,Stuti dance tuition fee,2020-08-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+300,Medicine (Medical),2020-08-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Medical
+210,Sweet (Grocery),2020-08-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+570,Bakery items (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+825,Grocery,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+4236,Washing m/c repair,2020-08-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,One Time
+3214,"Chinni dress, thermos, filter",2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Clothing
+1250,"Wahing powder, other (Grocery)",2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+100,Pen (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+599,iPhone 5S Battery,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+754,Pizza,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+784,Grocery,2020-08-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Grocery
+244,Gloves (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+2290,Saket books,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Education
+1868,Pinky and Chinni dress,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Clothing
+1628,Grocery,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+2024,Grocery,2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+230,Cake (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+711,Vegetables (Grocery),2020-08-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+5996,Car Insurance,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Yearly
+6800,Home Expense,2020-09-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+2130,Cash for regular use,2020-09-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+667,Milk refill,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+313,Cable TV,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+490,Chinni books,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Education
+320,Snacks (Grocery),2020-09-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1697,BESCOM,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+600,Stuti dance tuition fee,2020-09-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+589,AirTel,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+400,Snacks (Grocery),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1259,Vegetables (Grocery),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+330,Sweet (Grocery),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+578,Vegetables (Grocery),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1273,Saket KVPY Exam fee,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+2500,Driving License,2020-09-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,One Time
+630,Cooking gas,2020-09-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,Regular Monthly
+340,Snacks (Grocery),2020-09-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1549,Grocery (Grocery),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1232,Medicine (Medical),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+1754,Plants,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1184,Pizza,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+909,Grocery,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+280,Rusk (Grocery),2020-09-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+2396,Grocery,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+950,Stuti Cycle Repair,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1354,Chinni dress,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+540,Snacks (Grocery),2020-09-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1827,Grocery,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+560,Medicine (Medical),2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Medical
+1500,Petrol,2020-09-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+6800,Home Expense,2020-10-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+4055,Cash for regular use,2020-10-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1386,Airtel,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1710,Milk refill,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1024,Medicine (Medical),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+321,Cable TV,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1000,Kundagol,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Donation
+540,Cloths (Baniyan),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+2470,Grocery,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+442,Medicine (Medical),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+153,Vegetables (Grocery),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1662,BESCOM,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+599,Oximeter,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+2330,Grocery,2020-10-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Grocery
+250,Snacks (Grocery),2020-10-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+1910,Iron and Vitamin Tablets for Chinni & Rashmi (Medical),2020-10-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Medical
+345,Plant pots,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+600,Stuti dance tuition fee,2020-10-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+999,Amazon Prime Membership,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Yearly
+696,Haircut (Zing & Saket),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Regular Monthly
+852,Grocery,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+412,Vegetables (Grocery),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+370,Sweets (Grocery),2020-10-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+941,Gift to Pinky's father,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+516,Lunch outside,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+300,Gift to Pinky's father,2020-10-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Gift
+490,Loreal - Hair die for Pinky (Grocery),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+4450,"Laptop battery, keyboard and TV Remote",2020-10-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,One Time
+630,Snacks (Grocery),2020-10-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+901,Power bank,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+856,Grocery,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+240,Sweets (Grocery),2020-10-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Grocery
+977,Puma T Shirts,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+299,Gift for Saket's Friend (Deo),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+295,Floss (Grocery),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1041,Grocery,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+1510,Dry fruits (Grocery),2020-10-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Grocery
+375,Chinni t shirt,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+1760,Grocery,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+520,Cake (Grocery),2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+640,Lunch Outside,2020-10-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+4800,"Pinky, chinni dress and Vidhi gift",2020-11-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Clothing
+6800,Home Expense,2020-11-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+5340,Cash for regular use,2020-11-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+336,Cable TV,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1800,Milk refill,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+500,Buffello Milk,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1462,BESCOM,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+760,Grocery,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+988,Airtel,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1000,Petrol,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+2009,Grocery,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+2519,Medical expenses  (Medical),2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+597,Gas booking,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+600,Stuti Dance,2020-11-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+220,Rusk (Grocery),2020-11-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Grocery
+956,Grocery,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1659,Quilt cover,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1696,Saket books,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Education
+1895,Plants to Deewali gift,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+1159,LED Lights,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1523,Grocery,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+620,Sweets (Grocery),2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1600,Bonus to Bai's,2020-11-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,Yearly
+2000,Rashi Saadi,2020-11-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,Clothing
+180,Breakfast,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+149,Screen guard for Saket,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1103,Grocery,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+798,Mobile recharge,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+3118,Medical expenses  (Medical),2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+1063,Grocery,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+670,Gold chain repair,2020-11-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,One Time
+734,Pizza,2020-11-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1000,Petrol,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+1414,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+6800,Home Expense,2020-12-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+3000,Cash for regular use,2020-12-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+331,Cable TV,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+4300,Innerwears,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Clothing
+1632,Dinner outside,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+740,Cake (Grocery),2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1290,Saket books,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Education
+334,Lunch outside,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1763,BESCOM,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+408,Saket Olympiod,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+2288,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+363,Medicine,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Medical
+2460,Milk refill,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+600,Stuti Dance,2020-12-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+1109,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1727,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+250,Cera,2020-12-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,One Time
+1147,Gift items Chinni,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+4000,Aquagaurd Filter replacement,2020-12-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Yearly
+758,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+2500,Doctor Alergy,2020-12-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Medical
+732,Medicines (Medical),2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Medical
+150,X Mas Tree,2020-12-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,One Time
+215,Vegetables (Grocery),2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1250,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+2600,Saket JEE Main entrance fees,2020-12-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,One Time
+917,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1000,Petrol,2020-12-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+974,Saket books,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1979,Tawa and Grill pan,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+730,Cylender,2020-12-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+328,Gift item Chinni,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+425,Dinner outside,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+630,Face cream for Pinky,2020-12-01T11:08:39.000+00:00,Pinky Canara Debit Card,Nice,One Time,Grocery
+169,Zing Hair die,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1600,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,Recursive,Grocery
+351,Grocery,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+196,Jet Pipe,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Grocery
+1574,Track pants,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+1000,Petrol,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+440,Saket books,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+310,Lunch outside,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Hotel
+2498,Airtel,2020-12-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Yearly
+1050,PES Entrance,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+1155,VIT Entrance,2021-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,One Time,Education
+1387,Hair cut,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+7000,Home expenses (Monthly),2021-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+2000,New year celebration,2021-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Hotel
+4260,Cash for regular use,2021-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+330,Cable,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1671,Grocery,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1500,Kundagol,2021-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,Recursive,Donation
+1814,Grocery,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1999,BESCOM,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+200,Calander Gift to Mohit,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+2468,Milk Refill,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+600,Stuti Dance,2021-01-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Regular Expenses
+5062,Internet for 7 month,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1200,Covid test for Saket,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+1732,Grocery,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+293,Mask + Slippers,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Clothing
+261,Medicine,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+3873,"T-Shirt, Pant, Inners for Saket",2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Clothing
+1500,Petrol,2021-01-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+1614,Router for internet,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+768,Grocery,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1400,"Pinky, Stuti Hair cut",2021-01-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Regular Expenses
+100,Stationary,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+1708,Pinky - birthday gift to Zing,2021-01-01T11:08:39.000+00:00,Pinky Canara Debit Card,Nice,One Time,Clothing
+308,Mc Donald,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+897,Airtel + screen guard,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1790,Grocery,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+545,Medicine,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+734,Pizza,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Hotel
+1500,Petrol,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+1130,Grocery,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+516,Pinky books,2021-01-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Education
+8500,Home expenses (Monthly),2021-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+3860,Cash for regular use,2021-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+3044,Hotel with family,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Hotel
+851,Grocery,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Grocery
+1677,BESCOM,2021-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+3784,Pinky Face cream,2021-02-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Medical
+360,Cable,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1500,Petrol,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+4042,Grocery,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+721,Party with friends,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+401,Haircut + Ice cream,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+2000,MIT Entrance test fees,2021-02-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Education
+1087,Stuti pimple,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Medical
+600,Stuti Dance,2021-02-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+1668,Milk refill,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+891,Grocery,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1600,Grocery,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+528,Lunch outside,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+423,KFC for Saket,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+300,Dinner outside,2021-02-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Hotel
+300,Ice cream,2021-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Nice,One Time,Hotel
+772,Cylender,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+3923,Grocery,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+773,Medicine,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+1657,Pinky dress from Mintra,2021-02-01T11:08:39.000+00:00,Pinky Canara Debit Card,Nice,One Time,Clothing
+509,Doctor and medicine (Saket),2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Medical
+2554,Stuti track pants,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+1978,Grocery,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+804,Lunch for Saket and Stuti,2021-02-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+8400,Home expenses (Monthly),2021-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1500,Saket for daily expenses,2021-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1500,Petrol,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Local Transport
+1950,Cash for regular use,2021-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+314,Cable,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+290,Dinner outside,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1561,BESCOM,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+3533,Grocery,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+715,Medicine,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Medical
+734,Lunch from outside,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+2910,"Stuti, Pinky and Zing track pants from Jockey",2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+12500,Mattress expenses,2021-03-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,One Time
+600,Stuti Dance,2021-03-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+342,Gift to Jiya,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+2176,Grocery,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+2500,Plants,2021-03-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,One Time
+1800,Milk Refill,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+798,Airtel,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1574,Grocery,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+1500,Petrol,2021-03-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Local Transport
+200,Metro card recharge,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Local Transport
+400,Lunch out side,2021-03-01T11:08:39.000+00:00,Zing Current Account,Nice,One Time,Hotel
+1270,Dry fruits,2021-03-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Grocery
+910,Gift to Komal,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift
+414,Dinner outside,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1256,Grocery,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+390,Briefs to Saket,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Clothing
+409,Hotel with family,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+444,Saket Facewash,2021-03-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Medical
+75,Stationary,2021-03-01T11:08:39.000+00:00,Zing Current Account,Must,One Time,Education
+8400,Home expenses (Monthly),2021-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+1670,Cash for regular use,2021-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Regular Expenses
+942,Grocery,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+342,Cable,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1500,Kundagol,2021-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,Recursive,Donation
+1100,Dinner Outside,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+2309,Grocery,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+904,Medicine,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Medical
+509,Saket IISC Entrance fee,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,Education
+2360,Canra bank locker charges,2021-04-01T11:08:39.000+00:00,Pinky Canara Debit Card,Must,One Time,Yearly
+2967,Pinky shoes,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Clothing
+1661,BESCOM,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1329,LG Service (OE Error),2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,One Time,One Time
+600,Stuti Dance,2021-04-01T11:08:39.000+00:00,Zing Current Account,Must,Recursive,Education
+3430,Grocery,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+225,Book to Stuti,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,One Time
+1129,Lunch outside,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1500,Petrol,2021-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Must,Recursive,Local Transport
+1797,Milk Refill,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+812,Cylender,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Regular Expenses
+1250,Gift to Nitin and Nanda,2021-04-01T11:08:39.000+00:00,Zing HDFC Dabit Card,Nice,One Time,Gift
+682,Dinner outside,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Hotel
+1595,Grocery,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Must,Recursive,Grocery
+275,Gift to Chinni's friend,2021-04-01T11:08:39.000+00:00,Zing Credit Card,Nice,One Time,Gift

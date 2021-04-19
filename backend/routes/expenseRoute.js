@@ -6,7 +6,7 @@ const {isAuth, isAdmin} = require('../util');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    const expenses = await Expense.find({});
+    const expenses = await Expense.find({}).sort({"_id":-1});
     res.send(expenses);
   });
   

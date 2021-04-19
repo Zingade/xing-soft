@@ -100,9 +100,9 @@ function ExpenseScreen(props) {
                         <option value="Zing HDFC Dabit Card">Zing HDFC Dabit Card</option>
                         <option value="Zing Current Account">Zing Current Account</option>
                         <option  value="Zing IDFC Debit Card">Zing IDFC Debit Card</option>
-                        <option  value="Pinky Debit Card">Pinky Debit Card</option>
-                        <option value="Pinky Debit Card">Pinky Debit Card</option>
-                        <option value="Saket Debit Card">Saket Debit Card</option>
+                        <option  value="Pinky Canara Debit Card">Pinky Canara Debit Card</option>
+                        <option value="Pinky HDFC Debit Card">Pinky HDFC Debit Card</option>
+                        <option value="Saket HDFC Debit Card">Saket HDFC Debit Card</option>
                     </select>
                 </li>
                 <li>

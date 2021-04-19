@@ -1,0 +1,1 @@
+mongoimport.exe --host xing-shop-shard-00-02.q6iou.mongodb.net:27017 --db xing-shop --type csv --file Expenses.csv --username dbUser --password dbUser --headerline --collection expenses --authenticationDatabase admin --ssl
