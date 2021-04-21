@@ -8,6 +8,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import CreateAdminScreen from './screens/createAdminScreen';
 import ProductsScreen from './screens/productsScreen';
 import ExpenseScreen from './screens/ExpenseScreen';
+import ExpenseAnalysisScreen from './screens/ExpenseAnalysisScreen'
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import i18next from 'i18next';
@@ -65,6 +66,7 @@ function App() {
                 <Link to="/orders">Orders</Link>
                 <Link to="/products">Products</Link>
                 <Link to="/expenses">Expense</Link>
+                <Link to="/expensesAnalysis">Expense Analysis</Link>
               </li>
             </ul>
           </div>
@@ -105,6 +107,7 @@ function App() {
                 <Route path="/profile" component={ProfileScreen}/>
                 <Route path="/products" component={ProductsScreen}/>
                 <Route path="/expenses" component={ExpenseScreen}/>
+                <Route path="/expensesAnalysis" component={ExpenseAnalysisScreen}/>
                 <Route path="/createadmin" component={CreateAdminScreen}/>
                 <Route path="/register" component={RegisterScreen}/>
                 <Route path="/signin" component={SignInScreen}/>

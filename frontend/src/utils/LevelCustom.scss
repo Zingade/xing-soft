@@ -1,0 +1,83 @@
+.Level {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  
+    .level-item {
+      display: flex;
+      flex-direction: column;
+      width: calc(25%);
+  
+      & > * {
+        align-self: center;
+      }
+    }
+  
+    h1,
+    h5 {
+      margin-bottom: 0;
+    }
+  
+    h1 {
+      font-size:x-large;
+      font-weight: 600;
+    }
+  
+    h4 {
+      margin-bottom: -0.5rem;
+    }
+  
+    h5 {
+      font-weight: 600;
+      overflow-wrap: break-word;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .is-monthly_2021 {
+      h1,
+      h5 {
+        color: #ff073a;
+      }
+  
+      h4 {
+        color: #ff073a99;
+      }
+    }
+  
+    .is-overall_2021 {
+      h1,
+      h5 {
+        color: #007bff;
+      }
+  
+      h4 {
+        color: #007bff99;
+      }
+    }
+  
+    .is-monthly_2020 {
+      h1,
+      h5 {
+        color: #28a745;
+      }
+  
+      h4 {
+        color: #28a74599;
+      }
+    }
+  
+    .is-overall_2020 {
+      h1,
+      h5 {
+        color: #6c757d;
+      }
+  
+      h4 {
+        color: #6c757d99;
+      }
+    }
+  }
+  

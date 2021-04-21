@@ -1,1 +1,5 @@
 mongoimport.exe --host xing-shop-shard-00-02.q6iou.mongodb.net:27017 --db xing-shop --type csv --file Expenses.csv --username dbUser --password dbUser --headerline --collection expenses --authenticationDatabase admin --ssl
+
+mongoexport.exe --host xing-shop-shard-00-02.q6iou.mongodb.net:27017 --db xing-shop --type csv --out ExpensesLatest.csv --username dbUser --password dbUser --collection expenses --authenticationDatabase admin --ssl --fields amount,details,expenseDate,card,requiredType,occurance,category
+
+mongoexport.exe --host xing-shop-shard-00-02.q6iou.mongodb.net:27017 --db xing-shop --type json --out ExpensesLatest.json --username dbUser --password dbUser --collection expenses --authenticationDatabase admin --ssl
