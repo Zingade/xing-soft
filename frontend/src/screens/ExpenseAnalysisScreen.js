@@ -23,18 +23,24 @@ function ExpenseAnalysisScreen(props) {
   const dispatch = useDispatch();
 
   const analyisOfExpense = () => {
-    data1.delta.monthly_2021 = expenses
-                            .filter((expense) => {return expense.expenseDate >= startDate && expense.expenseDate <= endDate && expense.frequency === "Monthly";})
-                            .reduce((a,c) => a + 1 * c.amount, 0)
+
+  var date1 = new Date("01/01/2021");
+  var date2 = new Date();
+    // To calculate the time difference of two dates
+  var Difference_In_Time = date2.getTime() - date1.getTime();
+  
+  // To calculate the no. of days between two dates
+  var Difference_In_Months = ((Difference_In_Time / (1000 * 3600 * 24))*12)/365;
+
+
     data1.total.monthly_2021 = expenses
                             .filter((expense) => {return expense.expenseDate >= startYear2021 && expense.expenseDate <= endYear2021 && expense.frequency === "Monthly";})
                             .reduce((a,c) => a + 1 * c.amount, 0)
-    data1.delta.overall_2021 = expenses
-                            .filter((expense) => {return expense.expenseDate >= startDate && expense.expenseDate <= endDate;})
-                            .reduce((a,c) => a + 1 * c.amount, 0)
+    data1.delta.monthly_2021 = data1.total.monthly_2021 / Difference_In_Months;  
     data1.total.overall_2021 = expenses
                             .filter((expense) => {return expense.expenseDate >= startYear2021 && expense.expenseDate <= endYear2021;})
                             .reduce((a,c) => a + 1 * c.amount, 0)
+    data1.delta.overall_2021 = data1.total.overall_2021 / Difference_In_Months;  
     data1.total.monthly_2020 = expenses
                             .filter((expense) => {return expense.expenseDate >= startYear2020 && expense.expenseDate <= endYear2020 && expense.frequency === "Monthly";})
                             .reduce((a,c) => a + 1 * c.amount, 0)
