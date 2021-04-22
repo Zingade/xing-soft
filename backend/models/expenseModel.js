@@ -8,6 +8,7 @@ var expenseSchema = new mongoose.Schema({
     category:{type:String, required:true},
     requiredType: {type:String, required:true},
     occurance: {type:String, required:true},
+    frequency: {type:String, required:true},
 });
 
 module.exports = mongoose.model("Expense", expenseSchema);

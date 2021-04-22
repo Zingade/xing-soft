@@ -31,6 +31,7 @@ router.post("/", isAuth, isAdmin, async (req, res)=>{
         category:req.body.category,
         requiredType: req.body.requiredType,
         occurance: req.body.occurance,
+        frequency: req.body.frequency,
     })
     const newExpense = await expense.save(); 
     if(newExpense){
@@ -50,6 +51,7 @@ router.put("/:id", isAuth, isAdmin, async (req, res)=>{
         expense.category = req.body.category;
         expense.requiredType = req.body.requiredType;
         expense.occurance = req.body.occurance;
+        expense.frequency = req.body.frequency;
         const updatedExpense = await expense.save();
         if(updatedExpense){
             return res.status(201).send({message:'Expense updated!', data:updatedExpense})

@@ -15,6 +15,7 @@ function ExpenseScreen(props) {
     const [category, setCategory] = useState('');
     const [requiredType, setRequired] = useState('');
     const [occurance, setOccurance] = useState('');
+    const [frequency, setFrequency] = useState('');
 
     const expenseList = useSelector(state=>state.expenseList);
     const {loading, expenses, error} = expenseList;
@@ -43,11 +44,12 @@ function ExpenseScreen(props) {
         setCategory(expense.category);
         setRequired(expense.requiredType);
         setOccurance(expense.occurance);
+        setFrequency(expense.frequency);
     }
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(saveExpense({_id:id, details, amount, expenseDate, card, category, requiredType,occurance}));
+        dispatch(saveExpense({_id:id, details, amount, expenseDate, card, category, requiredType,occurance,frequency}));
     }
 
     const deleteHandler = (expenseId) => {
@@ -57,7 +59,7 @@ function ExpenseScreen(props) {
     return  <div className="containt containt-margined"> 
     <div className="product-header">
         <h3>Expenses</h3>
-        <button className="button primary" onClick ={()=>openModal({details:'',amount:'',card:'Zing Credit Card',expenseDate:new Date(),category:"Regular Expenses",requiredType:"Must",occurance:"Recursive"})}>New Expense</button>
+        <button className="button primary" onClick ={()=>openModal({details:'',amount:'',card:'Zing Credit Card',expenseDate:new Date(),category:"Regular Expenses",requiredType:"Must",occurance:"Recursive",frequency:"Monthly"})}>New Expense</button>
     </div>
     {modalVisible && 
     <div className="form">
@@ -143,6 +145,15 @@ function ExpenseScreen(props) {
                     </select>
                 </li>
                 <li>
+                <label htmlFor="frequency"> 
+                    Frequency:
+                    </label>
+                    <select value={frequency} name="frequency" id="frequency" onChange={(e)=>setFrequency(e.target.value)}>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Yearly">Yearly</option>
+                    </select>
+                </li>
+                <li>
                     <button type="submit" className="button primary">{id?"Update":"Create"}</button>
                 </li>
                 <li>
@@ -164,6 +175,7 @@ function ExpenseScreen(props) {
                     <th>Cateogory</th>
                     <th>Required Type</th>
                     <th>Occurance Type</th>
+                    <th>Frequency</th>
                 </tr>
             </thead>
             <tbody>
@@ -177,6 +189,7 @@ function ExpenseScreen(props) {
                 <td>{expense.category}</td>
                 <td>{expense.requiredType}</td>
                 <td>{expense.occurance}</td>
+                <td>{expense.frequency}</td>
                 <td>
                   <button onClick={()=>openModal(expense)} className="button">
                     Edit
