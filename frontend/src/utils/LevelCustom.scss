@@ -26,6 +26,7 @@
     }
   
     h4 {
+      font-size:large;
       margin-bottom: -0.5rem;
     }
   
@@ -81,3 +82,141 @@
     }
   }
   
+  .LevelLineItem {
+    background: #db558120;
+    border-radius: 5px;
+    color: #db5581;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+
+    h4 {
+      font-size:small;
+      margin: 0 0 0 0.5rem;
+      text-align: center;
+    }
+  }
+
+  .Home1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    .home-left,
+    .home-right {
+      display: flex;
+      flex-direction: column;
+      width: 40rem;
+    }
+  
+    .home-left {
+      margin-right: 2.5rem;
+      min-height: 60rem;
+    }
+  
+    .home-right {
+      margin-left: 2.5rem;
+      min-height: 10rem;
+    }
+  
+    .header {
+      z-index: 99;
+    }
+  }
+    
+  .table-container {
+    align-self: center;
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .table {
+    border-radius: 3px;
+    display: inline-grid;
+    font-size: 12px;
+    grid-template-rows: auto;
+    min-width: 100%;
+
+   .row {
+    cursor: pointer;
+    display: contents;
+    width: 100%;
+
+    .cell {
+      align-items: center;
+      border-radius: 3px;
+      color: #6c757d;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0.25rem;
+      padding: 0.5rem;
+      position: relative;
+
+      &:not(:first-child) {
+        flex-basis: 4rem;
+        flex-grow: 1;
+        flex-shrink: 0;
+        justify-content: flex-end;
+      }
+
+      &:first-child {
+        background: #f6f6f7;
+        flex-basis: 7rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: space-between;
+        left: 0;
+        position: sticky;
+        z-index: 11;
+
+        .sort-icon {
+          left: unset;
+          right: 0;
+        }
+      }
+
+      &.statistic {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .total {
+          font-size: 14px;
+        }
+
+        .is-zing_cc,
+        .is-monthly_2021 {
+          color: #ff073a;
+        }
+
+        .is-zing_hdfc,
+        .is-monthly_2020 {
+          color: #007bff;
+        }
+
+        .is-zing_current,
+        .is-recursive {
+          color: #28a745;
+        }
+
+        .is-pinky-hdfc,
+        .is-onetime {
+          color: #6c757d;
+        }
+
+        .is-pinky_canara,
+        .is-must{
+          color: #201aa2dd;
+        }
+
+        .is-nice {
+          color: #db5581;
+        }
+      }
+    }
+  }
+} 
