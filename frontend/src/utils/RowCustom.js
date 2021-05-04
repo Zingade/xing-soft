@@ -3,7 +3,7 @@ import {TABLE_COLUMNS, EXPENSE_CATEGORY} from '../constants/commonConstants'
 
 function Row({
   data,
-  stateCode,
+  expenseCode,
 }) {
 
   const tableStatistics = TABLE_COLUMNS;
@@ -11,8 +11,8 @@ function Row({
     <>
       <div className='row'>
         <div className="cell">
-          <div className="state-name fadeInUp">
-            {EXPENSE_CATEGORY[stateCode]}
+          <div className="expense-name">
+            {EXPENSE_CATEGORY[expenseCode]}
           </div>
         </div>
 

@@ -15,6 +15,8 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next'
 import {languages} from './utils/languages'
 import cookies from 'js-cookie'
+import { IconButton, Badge } from '@material-ui/core';
+import { MdAddShoppingCart, MdAccountCircle, MdPersonAdd } from "react-icons/md"
 
 function App() {
 
@@ -33,7 +35,7 @@ function App() {
         document.querySelector(".sidebar").classList.remove("open")
     }
     
-  return (
+    return (
     <BrowserRouter>
     <div className="grid-container">
         <header className="header">
@@ -46,11 +48,14 @@ function App() {
             {loading?<div> </div>:
             (error)?error.message:(
             <div className="header-links">
-            <Link to='/cart' >{t("Cart")}[{cartItems.length}]</Link>
-            {
-                userInfo  ? <Link to='/profile'>{userInfo.name}</Link>:
-                <Link to='/signin'>Sign In</Link>
-            }
+            <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
+              <Badge badgeContent={cartItems.length} color="primary">
+                <MdAddShoppingCart/>
+              </Badge>
+            </IconButton>
+            <IconButton component={Link} to={userInfo?"/profile":"/signin"} color="inherit">
+                    <MdAccountCircle/>
+            </IconButton>
           <div className="dropdown">
           <select className="lang_select" name="langSelect" defaultValue={currentLanguageCode} onChange={(e) => i18next.changeLanguage(e.target.value)}>
               {languages.map(({code, name}) =>
@@ -60,7 +65,7 @@ function App() {
           </div>
           {userInfo && userInfo.isAdmin && (
           <div className="dropdown">
-            <a href="#">Admin</a>
+            <IconButton href="#" color="inherit"> <MdPersonAdd/> </IconButton>
             <ul className="dropdown-content">
               <li>
                 <Link to="/orders">Orders</Link>

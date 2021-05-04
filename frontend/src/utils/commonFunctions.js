@@ -789,5 +789,665 @@ export const capitalizeCustom = (s) => {
   
   expenseDetails.TT.total.nice += expenseDetails.TR.total.nice;  
   expenseDetails.TT.delta.nice += expenseDetails.TR.delta.nice;
-}
+
+  expenseDetails.RM.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.RM.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc = expenseDetails.RM.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc = expenseDetails.RM.delta.zing_cc;
+  
+  expenseDetails.GR.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GR.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.GR.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.GR.delta.zing_cc;
+  
+  expenseDetails.OT.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.OT.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.OT.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.OT.delta.zing_cc;
+  
+  expenseDetails.CL.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.CL.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.CL.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.CL.delta.zing_cc;
+  
+  expenseDetails.HO.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.HO.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.HO.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.HO.delta.zing_cc;
+  
+  expenseDetails.ME.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ME.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.ME.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.ME.delta.zing_cc;
+  
+  expenseDetails.LT.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.LT.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.LT.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.LT.delta.zing_cc;
+  
+  expenseDetails.ED.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ED.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.ED.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.ED.delta.zing_cc;
+  
+  expenseDetails.DO.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.DO.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.DO.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.DO.delta.zing_cc;
+  
+  expenseDetails.GF.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GF.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.GF.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.GF.delta.zing_cc;
+  
+  expenseDetails.YR.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.YR.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.YR.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.YR.delta.zing_cc;
+  
+  expenseDetails.TR.total.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TR.delta.zing_cc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Zing Credit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_cc += expenseDetails.TR.total.zing_cc;  
+  expenseDetails.TT.delta.zing_cc += expenseDetails.TR.delta.zing_cc;
+  
+  expenseDetails.RM.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.RM.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current = expenseDetails.RM.total.zing_current;  
+  expenseDetails.TT.delta.zing_current = expenseDetails.RM.delta.zing_current;
+  
+  expenseDetails.GR.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GR.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.GR.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.GR.delta.zing_current;
+  
+  expenseDetails.OT.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.OT.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.OT.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.OT.delta.zing_current;
+  
+  expenseDetails.CL.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.CL.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.CL.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.CL.delta.zing_current;
+  
+  expenseDetails.HO.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.HO.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.HO.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.HO.delta.zing_current;
+  
+  expenseDetails.ME.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ME.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.ME.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.ME.delta.zing_current;
+  
+  expenseDetails.LT.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.LT.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.LT.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.LT.delta.zing_current;
+  
+  expenseDetails.ED.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ED.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.ED.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.ED.delta.zing_current;
+  
+  expenseDetails.DO.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.DO.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.DO.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.DO.delta.zing_current;
+  
+  expenseDetails.GF.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GF.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.GF.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.GF.delta.zing_current;
+  
+  expenseDetails.YR.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.YR.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.YR.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.YR.delta.zing_current;
+  
+  expenseDetails.TR.total.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TR.delta.zing_current = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Zing Current Account";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_current += expenseDetails.TR.total.zing_current;  
+  expenseDetails.TT.delta.zing_current += expenseDetails.TR.delta.zing_current;
+  
+  expenseDetails.RM.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.RM.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc = expenseDetails.RM.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc = expenseDetails.RM.delta.zing_hdfc;
+  
+  expenseDetails.GR.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GR.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.GR.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.GR.delta.zing_hdfc;
+  
+  expenseDetails.OT.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.OT.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.OT.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.OT.delta.zing_hdfc;
+  
+  expenseDetails.CL.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.CL.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.CL.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.CL.delta.zing_hdfc;
+  
+  expenseDetails.HO.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.HO.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.HO.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.HO.delta.zing_hdfc;
+  
+  expenseDetails.ME.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ME.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.ME.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.ME.delta.zing_hdfc;
+  
+  expenseDetails.LT.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.LT.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.LT.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.LT.delta.zing_hdfc;
+  
+  expenseDetails.ED.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ED.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.ED.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.ED.delta.zing_hdfc;
+  
+  expenseDetails.DO.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.DO.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.DO.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.DO.delta.zing_hdfc;
+  
+  expenseDetails.GF.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GF.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.GF.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.GF.delta.zing_hdfc;
+  
+  expenseDetails.YR.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.YR.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.YR.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.YR.delta.zing_hdfc;
+  
+  expenseDetails.TR.total.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TR.delta.zing_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Zing HDFC Dabit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.zing_hdfc += expenseDetails.TR.total.zing_hdfc;  
+  expenseDetails.TT.delta.zing_hdfc += expenseDetails.TR.delta.zing_hdfc;
+  
+  expenseDetails.RM.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.RM.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc = expenseDetails.RM.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc = expenseDetails.RM.delta.pinky_hdfc;
+  
+  expenseDetails.GR.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GR.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.GR.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.GR.delta.pinky_hdfc;
+  
+  expenseDetails.OT.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.OT.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.OT.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.OT.delta.pinky_hdfc;
+  
+  expenseDetails.CL.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.CL.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.CL.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.CL.delta.pinky_hdfc;
+  
+  expenseDetails.HO.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.HO.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.HO.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.HO.delta.pinky_hdfc;
+  
+  expenseDetails.ME.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ME.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.ME.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.ME.delta.pinky_hdfc;
+  
+  expenseDetails.LT.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.LT.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.LT.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.LT.delta.pinky_hdfc;
+  
+  expenseDetails.ED.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ED.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.ED.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.ED.delta.pinky_hdfc;
+  
+  expenseDetails.DO.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.DO.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.DO.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.DO.delta.pinky_hdfc;
+  
+  expenseDetails.GF.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GF.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.GF.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.GF.delta.pinky_hdfc;
+  
+  expenseDetails.YR.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.YR.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.YR.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.YR.delta.pinky_hdfc;
+  
+  expenseDetails.TR.total.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TR.delta.pinky_hdfc = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Pinky HDFC Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_hdfc += expenseDetails.TR.total.pinky_hdfc;  
+  expenseDetails.TT.delta.pinky_hdfc += expenseDetails.TR.delta.pinky_hdfc;
+  
+  expenseDetails.RM.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.RM.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Regular Expenses" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara = expenseDetails.RM.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara = expenseDetails.RM.delta.pinky_canara;
+  
+  expenseDetails.GR.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GR.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Grocery" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.GR.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.GR.delta.pinky_canara;
+  
+  expenseDetails.OT.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.OT.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "One Time" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.OT.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.OT.delta.pinky_canara;
+  
+  expenseDetails.CL.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.CL.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Clothing" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.CL.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.CL.delta.pinky_canara;
+  
+  expenseDetails.HO.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.HO.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Hotel" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.HO.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.HO.delta.pinky_canara;
+  
+  expenseDetails.ME.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ME.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Medical" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.ME.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.ME.delta.pinky_canara;
+  
+  expenseDetails.LT.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.LT.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Local Transport" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.LT.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.LT.delta.pinky_canara;
+  
+  expenseDetails.ED.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.ED.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Education" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.ED.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.ED.delta.pinky_canara;
+  
+  expenseDetails.DO.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.DO.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Donation" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.DO.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.DO.delta.pinky_canara;
+  
+  expenseDetails.GF.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.GF.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Gift" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.GF.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.GF.delta.pinky_canara;
+  
+  expenseDetails.YR.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.YR.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Yearly" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.YR.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.YR.delta.pinky_canara;
+  
+  expenseDetails.TR.total.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TR.delta.pinky_canara = expenses
+  .filter((expense) => {return expense.expenseDate >= startOFcurrentMonthString && expense.expenseDate <= todaysDateString && expense.frequency === "Monthly" && expense.category === "Travel" && expense.card === "Pinky Canara Debit Card";})
+  .reduce((a,c) => a + 1 * c.amount, 0) 
+  
+  expenseDetails.TT.total.pinky_canara += expenseDetails.TR.total.pinky_canara;  
+  expenseDetails.TT.delta.pinky_canara += expenseDetails.TR.delta.pinky_canara;
+  }
   

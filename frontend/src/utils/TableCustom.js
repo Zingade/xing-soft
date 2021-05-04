@@ -9,7 +9,7 @@ const RowCustom = lazy(() => import('./RowCustom'));
 
 
 function Table({
-  data: states,
+  data: expenses,
 }) {
 
   const tableStatistics = TABLE_COLUMNS;
@@ -36,25 +36,25 @@ function Table({
           </div>
 
           {
-            Object.keys(states)
+            Object.keys(expenses)
             .filter(
-              (stateCode) =>
-                stateCode !== 'TT')
-            .map((stateCode) => {
+              (expenseCode) =>
+                expenseCode !== 'TT')
+            .map((expenseCode) => {
                 return (
                   <RowCustom
-                    key={stateCode}
-                    data={states[stateCode]}
+                    key={expenseCode}
+                    data={expenses[expenseCode]}
                     {...{
-                      stateCode,
+                      expenseCode,
                     }}
                   />
                 );
               })}
             <RowCustom
               key={'TT'}
-              data={states['TT']}
-              stateCode={'TT'}
+              data={expenses['TT']}
+              expenseCode={'TT'}
               />
         </div>
       </div>

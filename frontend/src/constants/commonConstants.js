@@ -50,23 +50,23 @@ export const PRIMARY_STATISTICS_CUSTOM = [
       color: '#4b1eaa',
     },
     zing_cc: {
-      displayName: 'Zing Credit Card Used',
+      displayName: 'Zing Credit Card',
       color: '#fb5581',
     },
     zing_hdfc: {
-      displayName: 'Zing HDFC Debit Card Used',
+      displayName: 'Zing HDFC Debit Card',
       color: '#fb5581',
     },
     zing_current: {
-      displayName: 'Zing HDFC Current A/C Used',
+      displayName: 'Google Pay',
       color: '#fb5581',
     },
     pinky_hdfc: {
-      displayName: 'Pinky HDFC Debit Card Used',
+      displayName: 'Pinky HDFC Debit Card',
       color: '#fb5581',
     },
     pinky_canara: {
-      displayName: 'Pinky Canara Card Used',
+      displayName: 'Pinky Canara Card',
       color: '#fb5581',
     },
   };
