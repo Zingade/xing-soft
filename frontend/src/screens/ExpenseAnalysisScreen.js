@@ -31,8 +31,9 @@ function ExpenseAnalysisScreen(props) {
       <>
       <div style={{position: 'relative', marginTop: '1rem'}}> 
       {analyisOfExpense(expenses)}
+        <LevelLineItem inputText={"Current Month Expenses :"} amount={summaryExpense.current}/>
         <Level data={summaryExpense}/>
-        <LevelLineItem amount={summaryExpense.current}/>
+        <LevelLineItem inputText={"Available Balance :"} amount={summaryExpense.availableBalance}/>
       </div>
         <div className="Home1">
           <div className='home-left'>

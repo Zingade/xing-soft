@@ -16,7 +16,8 @@ import { useTranslation } from 'react-i18next'
 import {languages} from './utils/languages'
 import cookies from 'js-cookie'
 import { IconButton, Badge } from '@material-ui/core';
-import { MdAddShoppingCart, MdAccountCircle, MdPersonAdd } from "react-icons/md"
+import { MdAddShoppingCart, MdPersonAdd } from "react-icons/md"
+import { FiUser, FiUserCheck } from "react-icons/fi"
 
 function App() {
 
@@ -54,7 +55,7 @@ function App() {
               </Badge>
             </IconButton>
             <IconButton component={Link} to={userInfo?"/profile":"/signin"} color="inherit">
-                    <MdAccountCircle/>
+                {userInfo?<FiUserCheck/>:<FiUser/>}
             </IconButton>
           <div className="dropdown">
           <select className="lang_select" name="langSelect" defaultValue={currentLanguageCode} onChange={(e) => i18next.changeLanguage(e.target.value)}>

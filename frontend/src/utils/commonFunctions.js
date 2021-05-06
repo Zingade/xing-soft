@@ -34,7 +34,6 @@ export const capitalizeCustom = (s) => {
   // To calculate the no. of days between two dates
   var Difference_In_Months = ((Difference_In_Time / (1000 * 3600 * 24))*12)/365;
   
-  
   summaryExpense.total.monthly_2021 = expenses
                           .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= endOfCurrentYearString && expense.frequency === "Monthly";})
                           .reduce((a,c) => a + 1 * c.amount, 0)
@@ -42,6 +41,7 @@ export const capitalizeCustom = (s) => {
   summaryExpense.total.overall_2021 = expenses
                           .filter((expense) => {return expense.expenseDate >= startOfCurrentYearString && expense.expenseDate <= endOfCurrentYearString;})
                           .reduce((a,c) => a + 1 * c.amount, 0)
+  summaryExpense.availableBalance = ((4267 * Difference_In_Time)/(1000 * 3600 * 24)) - summaryExpense.total.overall_2021; 
   summaryExpense.delta.overall_2021 = summaryExpense.total.overall_2021 / Difference_In_Months;  
   summaryExpense.total.monthly_2020 = expenses
                           .filter((expense) => {return expense.expenseDate >= startOfPreviousYearString && expense.expenseDate <= endOfPreviousYearString && expense.frequency === "Monthly";})

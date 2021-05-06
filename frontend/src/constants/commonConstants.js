@@ -105,6 +105,7 @@ export const PRIMARY_STATISTICS_CUSTOM = [
       delta: {monthly_2021:0, overall_2021:0, monthly_2020:0, monthly_2020:0},
       total: {monthly_2021:0, overall_2021:0, monthly_2020:0, monthly_2020:0},
       current:0,
+      availableBalance:0,
   }
 
   export var expenseDetails = {
