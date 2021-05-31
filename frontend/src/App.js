@@ -18,6 +18,7 @@ import cookies from 'js-cookie'
 import { IconButton, Badge } from '@material-ui/core';
 import { MdAddShoppingCart, MdPersonAdd } from "react-icons/md"
 import { FiUser, FiUserCheck } from "react-icons/fi"
+import LogoImage from './LogoIncon.jpg'
 
 function App() {
 
@@ -104,6 +105,9 @@ function App() {
                     </li>
                     <li>
                         <Link to="/category/Others" onClick={closeMenu}>{t("Others")}</Link>
+                    </li>
+                    <li>
+                        <img className="logo-image" src={LogoImage} alt="logo"></img>
                     </li>
                 </ul>
         </aside>
