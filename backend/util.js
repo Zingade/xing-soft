@@ -9,7 +9,7 @@ const getToken = (user) => {
         name:user.name, 
         email:user.email,
         isAdmin:user.isAdmin
-    }, jwt_secret,{expiresIn:'48h'});
+    }, jwt_secret,{expiresIn:'365d'});
 }
 
 const isAuth = (req, res, next) => {
