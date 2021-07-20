@@ -19,6 +19,7 @@ import { IconButton, Badge } from '@material-ui/core';
 import { MdAddShoppingCart, MdPersonAdd } from "react-icons/md"
 import { FiUser, FiUserCheck } from "react-icons/fi"
 import LogoImage from './LogoIncon.jpg'
+import MutualFundScreen from './screens/MutualFundScreen';
 
 function App() {
 
@@ -52,11 +53,11 @@ function App() {
             <div className="header-links">
             <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
               <Badge badgeContent={cartItems.length} color="primary">
-                <MdAddShoppingCart/>
+                <MdAddShoppingCart fontSize={"large"}/>
               </Badge>
             </IconButton>
             <IconButton component={Link} to={userInfo?"/profile":"/signin"} color="inherit">
-                {userInfo?<FiUserCheck/>:<FiUser/>}
+                {userInfo?<FiUserCheck fontSize={"large"}/>:<FiUser fontSize={"large"}/>}
             </IconButton>
           <div className="dropdown">
           <select className="lang_select" name="langSelect" defaultValue={currentLanguageCode} onChange={(e) => i18next.changeLanguage(e.target.value)}>
@@ -67,13 +68,14 @@ function App() {
           </div>
           {userInfo && userInfo.isAdmin && (
           <div className="dropdown">
-            <IconButton href="#" color="inherit"> <MdPersonAdd/> </IconButton>
+            <IconButton href="#" color="inherit"> <MdPersonAdd fontSize={"large"}/> </IconButton>
             <ul className="dropdown-content">
               <li>
                 <Link to="/orders">Orders</Link>
                 <Link to="/products">Products</Link>
                 <Link to="/expenses">Expense</Link>
                 <Link to="/expensesAnalysis">Expense Analysis</Link>
+                <Link to="/mutualfunds">Mutual Funds</Link>
               </li>
             </ul>
           </div>
@@ -118,6 +120,7 @@ function App() {
                 <Route path="/products" component={ProductsScreen}/>
                 <Route path="/expenses" component={ExpenseScreen}/>
                 <Route path="/expensesAnalysis" component={ExpenseAnalysisScreen}/>
+                <Route path="/mutualfunds" component={MutualFundScreen}/>
                 <Route path="/createadmin" component={CreateAdminScreen}/>
                 <Route path="/register" component={RegisterScreen}/>
                 <Route path="/signin" component={SignInScreen}/>

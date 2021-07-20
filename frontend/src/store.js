@@ -5,6 +5,7 @@ import { cartDeleteReducer, cartListReducer, cartSaveReducer } from './reducers/
 import { userCreateAdminReducer, userRegisterReducer, userSigninReducer, userUpdateReducer } from './reducers/userReducers';
 import { orderDeleteReducer, orderListReducer, orderSaveReducer } from './reducers/orderReducers';
 import { expenseDeleteReducer, expenseListReducer, expenseSaveReducer } from './reducers/expenseReducers';
+import { mutualFundDeleteReducer, mutualFundListReducer, mutualFundSaveReducer } from './reducers/mutualFundReducers';
 
 const userInfoJSON = localStorage.getItem('userInfo');
 const userInfo = JSON.parse(userInfoJSON) || null;
@@ -27,6 +28,9 @@ const reducer = combineReducers({
     expenseList: expenseListReducer,
     expenseSave: expenseSaveReducer,
     expenseDelete: expenseDeleteReducer,
+    mutualFundList: mutualFundListReducer,
+    mutualFundSave: mutualFundSaveReducer,
+    mutualFundDelete: mutualFundDeleteReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

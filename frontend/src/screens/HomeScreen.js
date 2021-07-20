@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import { listMutualFunds } from '../actions/mutualFundActions';
 import { Link } from 'react-router-dom';
 import { addToCart, listCarts, removeFromCart } from '../actions/cartActions';
 import { useTranslation } from 'react-i18next'
@@ -28,6 +29,7 @@ const dispatch = useDispatch();
   useEffect(()=>{
       dispatch(listProducts(category));
       dispatch(listCarts());
+      dispatch(listMutualFunds());
       return() => {
 
       };
