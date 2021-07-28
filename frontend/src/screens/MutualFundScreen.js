@@ -6,6 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import {format} from 'date-fns';
 import { formatNumberCustom } from '../utils/commonFunctions';
 import Level from '../utils/LevelCustom'
+import {FundCard, AssetCard} from '../utils/MutualFundCards'
+import { Grid } from '@material-ui/core';
 
 
 function MutualFundScreen(props) {
@@ -25,15 +27,7 @@ function MutualFundScreen(props) {
     const {loading:loadingDelete, success: successDelete, error:errorDelete} = mutualFundDelete;
     const dispatch = useDispatch();
 
-    const summaryMF = {
-        total:{
-            monthly_2021:mutualFunds.investValue,
-        },
-        delta:{
-            monthly_2021:(mutualFunds.actualValue - mutualFunds.investValue)
-        }
-    }
-        useEffect(()=>{
+    useEffect(()=>{
         if(successSave){
             setModalVisible(false);
         }
@@ -64,8 +58,16 @@ function MutualFundScreen(props) {
     return (  <>
     {loading?<div>Loading.....</div>:
     error?<div>{error}</div>:(
-    <div className="containt containt-margined"> 
-    <Level data={summaryMF} /> 
+        <div>
+            <Grid container justify="center" style={{display:"flex"}}>
+                <AssetCard data={{curValue:mutualFunds.actualValue, invValue:mutualFunds.investValue}}/>
+                {mutualFunds.map((mutualFund,count) => (
+                    <div key={mutualFund._id}> 
+                        <FundCard data={{ fundName:mutualFund.name, fundNav:mutualFund.nav, amount:mutualFund.amount, currentValue:mutualFund.total, gain:mutualFund.profit, gainPercentage:mutualFund.profitPercentage }} />
+                    </div>
+                ))}
+            </Grid>
+    <div className="containt containt-margined">
     <div className="product-header">
         <h3>Mutual Funds</h3>
         <button className="button primary" onClick ={()=>openModal({name:'ICICI PRUDENTIAL TECHNOLOGY FUND - GROWTH',amount:'',mutualFundDate:new Date(),apiLink:'',Units:''})}>New Mutual Fund</button>
@@ -167,6 +169,7 @@ function MutualFundScreen(props) {
         </table>
     </div>
     </div>
+    </div> 
     )}
     </>
     )

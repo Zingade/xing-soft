@@ -17,7 +17,7 @@ const listMutualFunds = () => async (dispatch) => {
                     data[i].nav = parseFloat(response.data.data[0].nav)
                     data[i].total = data[i].nav * data[i].units 
                     data[i].profit = data[i].total - data[i].amount 
-                    data[i].profitPercentage = (data[i].profit * 100)/data[i].total
+                    data[i].profitPercentage = (data[i].profit * 100)/data[i].amount
                     data.investValue += data[i].amount
                     data.actualValue += data[i].total
                   })
