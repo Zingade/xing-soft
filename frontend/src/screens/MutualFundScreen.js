@@ -63,7 +63,7 @@ function MutualFundScreen(props) {
                 <AssetCard data={{curValue:mutualFunds.actualValue, invValue:mutualFunds.investValue}}/>
                 {mutualFunds.map((mutualFund,count) => (
                     <div key={mutualFund._id}> 
-                        <FundCard data={{ fundName:mutualFund.name, fundNav:mutualFund.nav, amount:mutualFund.amount, currentValue:mutualFund.total, gain:mutualFund.profit, gainPercentage:mutualFund.profitPercentage }} />
+                        <FundCard data={mutualFund} />
                     </div>
                 ))}
             </Grid>
