@@ -67,7 +67,7 @@ function MutualFundScreen(props) {
                     </div>
                 ))}
             </Grid>
-    <div className="containt containt-margined">
+{/*}    <div className="containt containt-margined">
     <div className="product-header">
         <h3>Mutual Funds</h3>
         <button className="button primary" onClick ={()=>openModal({name:'ICICI PRUDENTIAL TECHNOLOGY FUND - GROWTH',amount:'',mutualFundDate:new Date(),apiLink:'',Units:''})}>New Mutual Fund</button>
@@ -168,7 +168,7 @@ function MutualFundScreen(props) {
             </tbody>
         </table>
     </div>
-    </div>
+            </div>*/}
     </div> 
     )}
     </>
