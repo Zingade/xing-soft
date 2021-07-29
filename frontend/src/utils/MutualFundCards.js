@@ -8,58 +8,51 @@ const useStyles = makeStyles((theme) => ({
         width: 375,
         height:"auto",
         textAlign:"center",    
-        borderRadius:"20px"    
+        borderRadius:"20px",    
+        backgroundColor:"#edeeef"   
     },
     assetcard:{
         margin:"5px 5px",
         width: "98%",
         height:"auto",
         textAlign:"center",
-        borderRadius:"20px"    
+        borderRadius:"20px",
+        backgroundColor:"#edeeef"   
     },
     assetText:{
         color:"rgb(0,0,0)", 
         fontWeight: 600, 
     },
     profitText:{
-        color:"rgb(0,128,0)", 
-        fontWeight: 600, 
+        color:"#28a745", 
         fontSize: 30, 
     },
     curValueText:{
-        color:"rgb(0,0,200)", 
-        fontWeight: 600, 
-        fontSize: 40, 
+        color:"#201aa2dd", 
+        fontSize: 45, 
     },
     fundName:{
-        color:"rgb(128,0,128)", 
-        fontWeight: 600, 
+        color:"#007bff", 
         fontSize: 22, 
     },
     fundNav:{
-        color:"rgba(0,0,128,0.8)", 
-        fontWeight: 600, 
+        color:"#6c757d", 
         fontSize: 20, 
     },
     fundAmount:{
-        color:"rgba(0,0,128,0.8)", 
-        fontWeight: 600,
+        color:"#6c757d", 
         fontSize: 20, 
     },
     fundCurValue:{
-        color:"rgba(0,0,128,0.8)", 
-        fontWeight: 600,
+        color:"#6c757d", 
         fontSize: 20, 
     },
     fundGain:{
-        color:"rgb(0,128,0)", 
-        fontWeight: 600,
+        color:"#28a745", 
         fontSize:25,
-        fontSize: 25, 
     },
     fundLoss:{
-        color:"rgb(128,0,0)", 
-        fontWeight: 600,
+        color:"#ff073a", 
         fontSize:25,
     },
     button: {
