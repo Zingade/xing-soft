@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button, Card, CardContent, Grid, makeStyles, Typography } from '@material-ui/core';
-//import { MdModeEdit } from "react-icons/md"
+import { Card, CardContent, Grid, makeStyles, Typography } from '@material-ui/core';
+import Popup from '../controls/Popup'
+import MutualFundForm from './MutualFundForm';
+import Controls from '../controls/Controls';
 
 const useStyles = makeStyles((theme) => ({
     fundcard:{
@@ -56,16 +58,19 @@ const useStyles = makeStyles((theme) => ({
         fontSize:25,
     },
     button: {
+        fontSize:15,
+        borderRadius:"20px",
         margin: theme.spacing(0),
       },
 }))
 
 const FundCard = (props) => {
     const classes = useStyles();
-    const {data} = props;
-    /*const handleEditEvent = (e) => {
-        console.log(e.target)
-    }*/
+    const {data, openPopup, setOpenPopup, openDialog, formValues, setFormValues} = props;
+    const handleEdit = () => {
+        openDialog({id:data._id, name: data.name, amount:data.amount, apiLink:data.apiLink, mutualFundDate:data.mutualFundDate, units:data.units})
+    }
+
     return (
         <Grid item component={Card} elevation={10} className={classes.fundcard}>
             <CardContent>
@@ -74,16 +79,28 @@ const FundCard = (props) => {
                 <Typography variant="h5" className={classes.fundAmount}>Invested Amount: ₹{data.amount}</Typography>
                 <Typography variant="h5" className={classes.fundAmount}>Current Value: ₹{parseFloat(data.total).toFixed(0)}</Typography>
                 <Typography variant="h5" className={(data.profit>0)?classes.fundGain:classes.fundLoss}>{(data.profit > 0)?"Gain:":"Loss:"} ₹{parseFloat(data.profit).toFixed(0)} ({parseFloat(data.profitPercentage).toFixed(2)}%)</Typography>
-                {/*<Button
-                    id={data._id}
-                    variant="contained"
-                    color="primary"
-                    className={classes.button}
-                    startIcon={<MdModeEdit />}
-                    onClick={handleEditEvent}
-                >
+                <Grid container justify="flex-end">
+                    <Controls.Button
+                        id={data._id}
+                        variant="contained"
+                        text="Edit"
+                        className={classes.button}
+                        onClick={handleEdit}
+                    >
                     Edit
-                </Button>*/}
+                    </Controls.Button>
+                </Grid>
+                <Popup
+                title={(formValues.id)?"Update Mutual Fund":"Create New Mutual Fund"}
+                openPopup = {openPopup}
+                setOpenPopup = {setOpenPopup}
+                >
+                    <MutualFundForm 
+                    values = {formValues}
+                    setValues = {setFormValues}
+                    setOpenPopup = {setOpenPopup}
+                    />
+                </Popup>
             </CardContent>
         </Grid>
     )

@@ -1,6 +1,4 @@
 import Axios from "axios"
-import { ConnectionPolicyPage } from "twilio/lib/rest/voice/v1/connectionPolicy";
-import { mutualFundsDetails } from "../constants/commonConstants";
 import { MUTUAL_FUND_DELETE_FAIL, MUTUAL_FUND_DELETE_REQUEST, MUTUAL_FUND_DELETE_SUCCESS, MUTUAL_FUND_LIST_FAIL, MUTUAL_FUND_LIST_REQUEST, MUTUAL_FUND_LIST_SUCCESS, MUTUAL_FUND_SAVE_FAIL, MUTUAL_FUND_SAVE_REQUEST, MUTUAL_FUND_SAVE_SUCCESS } from '../constants/mutualFundConstants'
 
 const listMutualFunds = () => async (dispatch) => {
@@ -70,62 +68,3 @@ const deleteMutualFund = (mutualFundId) => async (dispatch, getState) => {
 
 
 export {listMutualFunds,saveMutualFund,deleteMutualFund}; 
-
-/*const listMutualFunds = () => async (dispatch) => {
-    let iciciPrud, sbiHC, axisBlueChip, hdfcGold, hdfcIndex;    
-    try {
-      dispatch({ type: MUTUAL_FUND_LIST_REQUEST });
-
-      await Axios.get('https://api.mfapi.in/mf/100363')
-                              .then((response) => {
-                                // handle success
-                                iciciPrud = parseFloat(response.data.data[0].nav)
-                              })
-                              .catch((error) => {
-                                // handle error
-                                console.log(error);
-                              })
-      await Axios.get('https://api.mfapi.in/mf/102823')
-                              .then((response) => {
-                                // handle success
-                                sbiHC = parseFloat(response.data.data[0].nav)
-                              })
-                              .catch((error) => {
-                                // handle error
-                                console.log(error);
-                              })
-      await Axios.get('https://api.mfapi.in/mf/112277')
-                              .then((response) => {
-                                // handle success
-                                axisBlueChip = parseFloat(response.data.data[0].nav)
-                              })
-                              .catch((error) => {
-                                // handle error
-                                console.log(error);
-                              })
-      await Axios.get('https://api.mfapi.in/mf/115934')
-                              .then((response) => {
-                                // handle success
-                                hdfcGold = parseFloat(response.data.data[0].nav)
-                              })
-                              .catch((error) => {
-                                // handle error
-                                console.log(error);
-                              })
-      await Axios.get('https://api.mfapi.in/mf/101525')
-                              .then((response) => {
-                                // handle success
-                                hdfcIndex = parseFloat(response.data.data[0].nav)
-                              })
-                              .catch((error) => {
-                                // handle error
-                                console.log(error);
-                              })
-      console.log(iciciPrud, sbiHC, axisBlueChip, hdfcGold, hdfcIndex)
-      dispatch({ type: MUTUAL_FUND_LIST_SUCCESS, payload: {iciciPrud:iciciPrud, sbiHC:sbiHC, axisBlueChip:axisBlueChip, hdfcGold:hdfcGold, hdfcIndex:hdfcIndex} });
-    } catch (error) {
-      dispatch({ type: MUTUAL_FUND_LIST_FAIL, payload: error.message });
-    }
-  };
-
-export {listMutualFunds};*/
